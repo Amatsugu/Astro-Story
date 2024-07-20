@@ -11,25 +11,25 @@ using UnityEngine.SceneManagement;
 [ExecuteInEditMode]
 public class Loader : MonoBehaviour
 {
-	public string[] scenePaths = new[]
+	public (string path, int index)[] scenePaths = new[]
 	{
-		"Assets/Scenes/Base.unity",
-		"Assets/Scenes/Enviroment.unity",
+		("Assets/Scenes/Base.unity", 1),
+		("Assets/Scenes/Enviroment.unity", 2),
 	};
 
 	private void Start()
 	{
-		foreach (var path in scenePaths)
+		foreach (var (path, index) in scenePaths)
 		{
-			var scene = SceneManager.GetSceneByPath(path);
 #if UNITY_EDITOR
+			var scene = SceneManager.GetSceneByPath(path);
 			if (!Application.isPlaying)
 			{
 				if (!scene.isLoaded)
 					EditorSceneManager.OpenScene(path, OpenSceneMode.Additive);
 			}
 #else
-			SceneManager.LoadScene(scene.buildIndex, LoadSceneMode.Additive);
+			SceneManager.LoadScene(index, LoadSceneMode.Additive);
 #endif
 		}
 	}
