@@ -101,5 +101,6 @@ public class PlayerController : MonoBehaviour
 			pitch = Mathf.Lerp(minPitch, boostPitch, speedScale);
 		else
 			pitch = Mathf.Lerp(minPitch, maxPitch, speedScale);
+		_audioSource.pitch = pitch;
 	}
 }
