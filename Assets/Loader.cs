@@ -11,7 +11,11 @@ using UnityEngine.SceneManagement;
 [ExecuteInEditMode]
 public class Loader : MonoBehaviour
 {
-	public string[] scenePaths;
+	public string[] scenePaths = new[]
+	{
+		"Assets/Scenes/Base.unity",
+		"Assets/Scenes/Enviroment.unity",
+	};
 
 	private void Start()
 	{
