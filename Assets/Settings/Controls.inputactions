@@ -105,7 +105,7 @@
                 {
                     "name": "W/S",
                     "id": "78add22d-a7b0-43f6-809f-07f958dcae24",
-                    "path": "1DAxis",
+                    "path": "1DAxis(whichSideWins=2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -138,7 +138,7 @@
                 {
                     "name": "Arrows",
                     "id": "9df373a4-c767-4547-b069-803ddb36cd99",
-                    "path": "1DAxis",
+                    "path": "1DAxis(whichSideWins=2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -171,7 +171,7 @@
                 {
                     "name": "Trigger",
                     "id": "b6ab8f60-2666-40ee-b36c-4c9ba2b49d00",
-                    "path": "1DAxis",
+                    "path": "1DAxis(whichSideWins=2)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
