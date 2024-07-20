@@ -199,7 +199,7 @@
       "url": "https://packages.unity.com"
     },
     "dev.yarnspinner.unity": {
-      "version": "file:C:/Users/Amazed/Projects/YarnPackage/YarnSpinner-Unity-main/YarnSpinner-Unity-main",
+      "version": "file:YarnSpinner-Unity-main/YarnSpinner-Unity-main",
       "depth": 0,
       "source": "local",
       "dependencies": {}
