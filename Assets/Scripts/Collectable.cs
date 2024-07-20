@@ -11,6 +11,11 @@ public class Collectable : MonoBehaviour
 	private Collider _collider;
 
 
+	private void OnValidate()
+	{
+		GetComponent<Collider>().isTrigger = true;
+	}
+
 	private void Start()
 	{
 		_collider = GetComponent<Collider>();
@@ -19,6 +24,8 @@ public class Collectable : MonoBehaviour
 	private void OnTriggerEnter(Collider other)
 	{
 		ResourceTracker.ModifyResource(resource, value);
+
+		ResourceTracker.ModifyResource(Resource.ResouceA, 10);
 		Destroy(gameObject);
 	}
 
