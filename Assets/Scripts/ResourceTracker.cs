@@ -8,7 +8,7 @@ using UnityEngine;
 public class ResourceTracker 
 {
 
-	public ResourceTracker Inst
+	public static ResourceTracker Inst
 	{
 		get { 
 			if(_inst == null)
@@ -37,10 +37,10 @@ public class ResourceTracker
 	/// <param name="amount">Positive values add, negative values remove</param>
 	public static int ModifyResource(Resource type, int amount)
 	{
-		_inst._resources[type] += amount;
-		if(_inst._resources[type] < 0) 
-			_inst._resources[type] = 0;
-		return _inst._resources[type];
+		Inst._resources[type] += amount;
+		if(Inst._resources[type] < 0)
+			Inst._resources[type] = 0;
+		return Inst._resources[type];
 	}
 
 	/// <summary>
@@ -51,7 +51,7 @@ public class ResourceTracker
 	/// <returns></returns>
 	public static bool HasResource(Resource type, int qty = 1) 
 	{ 
-		return _inst._resources[type] >= qty;
+		return Inst._resources[type] >= qty;
 	}
 
 	/// <summary>
@@ -61,7 +61,7 @@ public class ResourceTracker
 	/// <returns></returns>
 	public static int GetResouceCount(Resource type)
 	{
-		return _inst._resources[type];
+		return Inst._resources[type];
 	}
 
 

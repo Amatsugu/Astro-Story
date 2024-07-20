@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
+using UnityEditor.Rendering.LookDev;
+
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,7 +13,6 @@ public class PlayerController : MonoBehaviour
 	public float speed = 10;
 
 	public float acceleration = 1;
-	public float boostSpeed = 20;
 	public float drag = 2;
 
 	public float turnSpeed = 1;
@@ -18,36 +20,58 @@ public class PlayerController : MonoBehaviour
 
 	[Header("Sounds")]
 	public float minPitch = 1;
+
 	public float maxPitch = 1.2f;
-	public float boostPitch = 1.5f;
 
 	private float _curSpeed;
 	private float _curTurnSpeed;
+	private float _steer;
+	private float _thrust;
+
 	private Transform _transform;
 	private AudioSource _audioSource;
+	private PlayerInput _playerInput;
+	private InputAction _steerAction;
+	private InputAction _thrustAction;
 
 	// Start is called before the first frame update
 	private void Start()
 	{
 		_transform = transform;
 		_audioSource = GetComponent<AudioSource>();
+		_playerInput = GetComponent<PlayerInput>();
+		_steerAction = _playerInput.actions.FindAction("Steer");
+		_thrustAction = _playerInput.actions.FindAction("Thrust");
+
+		_steerAction.started += Steer;
+		_steerAction.canceled += Steer;
+		_steerAction.performed += Steer;
+		_thrustAction.started += Thrust;
+		_thrustAction.canceled += Thrust;
+		_thrustAction.performed += Thrust;
 		_audioSource.loop = true;
 		if (!_audioSource.isPlaying)
 			_audioSource.Play();
 	}
 
+	private void Steer(InputAction.CallbackContext context)
+	{
+		_steer = context.ReadValue<float>();
+	}
+
+	private void Thrust(InputAction.CallbackContext context)
+	{
+		_thrust = context.ReadValue<float>();
+	}
+
 	// Update is called once per frame
 	private void Update()
 	{
-		var isBoosting = Input.GetKey(KeyCode.Space);
-		var curMaxSpeed = isBoosting ? speed : boostSpeed;
-		if (Input.GetKey(KeyCode.W))
+		var curMaxSpeed = speed;
+
+		if (_thrust != 0)
 		{
-			_curSpeed += acceleration * Time.deltaTime;
-		}
-		else if (Input.GetKey(KeyCode.S))
-		{
-			_curSpeed -= acceleration * Time.deltaTime;
+			_curSpeed += acceleration * Time.deltaTime * _thrust;
 		}
 		else
 		{
@@ -57,27 +81,21 @@ public class PlayerController : MonoBehaviour
 			}
 		}
 
-		if (Input.GetKey(KeyCode.A))
+		if (_steer != 0)
 		{
-			if(_curTurnSpeed > 0)
+			if (_curTurnSpeed < 0 && _steer > 0)
 				_curTurnSpeed = 0;
-			_curTurnSpeed -= turnSpeed * Time.deltaTime;
-		}else if (Input.GetKey(KeyCode.D))
-		{
-			if (_curTurnSpeed < 0)
+			if (_curTurnSpeed > 0 && _steer < 0)
 				_curTurnSpeed = 0;
-			_curTurnSpeed += turnSpeed * Time.deltaTime;
+			_curTurnSpeed += turnSpeed * Time.deltaTime * _steer;
 		}
 		else
 		{
-			if(_curTurnSpeed > 0)
+			if (_curTurnSpeed > 0)
 				_curTurnSpeed -= turnDrag * Time.deltaTime;
 			if (_curTurnSpeed < 0)
 				_curTurnSpeed += turnDrag * Time.deltaTime;
 		}
-
-
-
 
 		_curSpeed = Mathf.Clamp(_curSpeed, 0, curMaxSpeed);
 
@@ -85,7 +103,6 @@ public class PlayerController : MonoBehaviour
 
 		var rot = Quaternion.AngleAxis(angle + _curTurnSpeed * Time.deltaTime, Vector3.up);
 		_transform.rotation = rot;
-
 
 		var fwd = _transform.forward;
 		var move = _curSpeed * Time.deltaTime * fwd;
@@ -95,12 +112,8 @@ public class PlayerController : MonoBehaviour
 
 		_transform.Translate(move, Space.World);
 
-		var pitch = minPitch;
 		var speedScale = _curSpeed / curMaxSpeed;
-		if (isBoosting)
-			pitch = Mathf.Lerp(minPitch, boostPitch, speedScale);
-		else
-			pitch = Mathf.Lerp(minPitch, maxPitch, speedScale);
+		var pitch = Mathf.Lerp(minPitch, maxPitch, speedScale);
 		_audioSource.pitch = pitch;
 	}
 }

@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+
+using TMPro;
+
 using UnityEngine;
 
+[RequireComponent(typeof(TextMeshProUGUI))]
 public class ResourceHUD : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public Resource resource;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private TextMeshProUGUI _text;
+	private void Start()
+	{
+		_text = GetComponent<TextMeshProUGUI>();
+	}
+
+	private void FixedUpdate()
+	{
+		_text.SetText($"{ResourceTracker.GetResouceCount(resource)}");
+	}
 }
