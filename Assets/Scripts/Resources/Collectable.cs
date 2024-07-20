@@ -7,6 +7,7 @@ public class Collectable : MonoBehaviour
 {
 	public Resource resource;
 	public int value;
+	public bool killParent;
 	
 	private Collider _collider;
 
@@ -26,7 +27,10 @@ public class Collectable : MonoBehaviour
 		ResourceTracker.ModifyResource(resource, value);
 
 		ResourceTracker.ModifyResource(Resource.ResouceA, 10);
-		Destroy(gameObject);
+		if(killParent)
+			Destroy(gameObject.transform.parent.gameObject);
+		else
+			Destroy(gameObject);
 	}
 
 }

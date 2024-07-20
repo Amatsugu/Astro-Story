@@ -14,7 +14,8 @@ public class PlayerController : MonoBehaviour
 	public float acceleration = 1;
 	public float drag = 2;
 
-	public float turnSpeed = 1;
+	public float steeringSpeed = 1;
+	public float maxTurnSpeed = 1;
 	public float turnDrag = 1;
 
 	[Header("Sounds")]
@@ -81,13 +82,7 @@ public class PlayerController : MonoBehaviour
 		}
 
 		if (_steer != 0)
-		{
-			if (_curTurnSpeed < 0 && _steer > 0)
-				_curTurnSpeed = 0;
-			if (_curTurnSpeed > 0 && _steer < 0)
-				_curTurnSpeed = 0;
-			_curTurnSpeed += turnSpeed * Time.deltaTime * _steer;
-		}
+			_curTurnSpeed += steeringSpeed * Time.deltaTime * _steer;
 		else
 		{
 			if (_curTurnSpeed > 0)
@@ -95,6 +90,11 @@ public class PlayerController : MonoBehaviour
 			if (_curTurnSpeed < 0)
 				_curTurnSpeed += turnDrag * Time.deltaTime;
 		}
+
+		if(_curTurnSpeed > maxTurnSpeed)
+			_curTurnSpeed = maxTurnSpeed;
+		if(_curTurnSpeed < -maxTurnSpeed)
+			_curTurnSpeed = -maxTurnSpeed;
 
 		_curSpeed = Mathf.Clamp(_curSpeed, 0, curMaxSpeed);
 
