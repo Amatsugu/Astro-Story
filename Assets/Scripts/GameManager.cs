@@ -1,6 +1,5 @@
 using Cinemachine;
 
-using System.Collections;
 using System.Collections.Generic;
 
 using TMPro;
@@ -27,38 +26,38 @@ public class GameManager : MonoBehaviour
 	{
 		Instance = this;
 		_planets = new();
-		var planets = FindObjectsByType<PlanetInteraction>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
-		foreach (var planet in planets)
-		{
-			if (!_planets.TryAdd(planet.planet, planet.transform))
-				Debug.LogWarning($"Duplicate entry for <color='red'>{planet.planet}</color> found", planet);
-			else
-				Debug.Log($"Added entry for planet <color='White'>{planet.planet}</color>");
-		}
+	}
 
-#if DEBUG
-		var first = GetPlanet(YarnManager.Planet.Alpha);
-		if( first != null )
-			Compass.SetTarget(first);
-#endif
-
+	public static void RegisterPlanet(PlanetInteraction planet)
+	{
+		if (Instance._planets == null)
+			Instance._planets = new();
+		if (!Instance._planets.TryAdd(planet.planet, planet.transform))
+			Debug.LogWarning($"Duplicate entry for <color='red'>{planet.planet}</color> found", planet);
+		else
+			Debug.Log($"Added entry for planet <color='White'>{planet.planet}</color>");
 	}
 
 	private void Start()
 	{
+#if DEBUG
+		var first = GetPlanet(YarnManager.Planet.Alpha);
+		if (first != null)
+			Compass.SetTarget(first);
+#endif
+
 		planetCamera.gameObject.SetActive(false);
 		interactAction.action.performed += Interact;
 
 		HidePrompt();
 		selectedPlanet = YarnManager.Planet.Alpha;
 		YarnManager.RunDialogue(YarnManager.Planet.Alpha);
-
 	}
 
 	public void OnDialougeStart()
 	{
 		Debug.Log("Dialouge Start");
-		if(selectedPlanet is YarnManager.Planet planet)
+		if (selectedPlanet is YarnManager.Planet planet)
 		{
 			HidePrompt();
 			planetCamera.gameObject.SetActive(true);
@@ -95,8 +94,6 @@ public class GameManager : MonoBehaviour
 	{
 		if (selectedPlanet == null)
 			return;
-
-
 	}
 
 	private void HidePrompt()
@@ -106,7 +103,7 @@ public class GameManager : MonoBehaviour
 
 	private void ShowPrompt()
 	{
-		if(IsInDialouge)
+		if (IsInDialouge)
 			return;
 		prompt.SetText(selectedPlanet?.ToString() ?? "Interact");
 		prompt.gameObject.SetActive(true);
@@ -126,9 +123,8 @@ public class GameManager : MonoBehaviour
 
 	public static Transform GetPlanet(YarnManager.Planet planet)
 	{
-		if(Instance._planets.TryGetValue(planet, out var transform))
+		if (Instance._planets.TryGetValue(planet, out var transform))
 			return transform;
 		return null;
 	}
-
 }

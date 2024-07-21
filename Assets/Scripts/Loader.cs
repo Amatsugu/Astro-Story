@@ -17,7 +17,7 @@ public class Loader : MonoBehaviour
 		("Assets/Scenes/Enviroment.unity", 2),
 	};
 
-	private void Start()
+	private void Awake()
 	{
 		foreach (var (path, index) in scenePaths)
 		{
