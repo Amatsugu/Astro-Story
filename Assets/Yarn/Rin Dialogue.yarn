@@ -1,6 +1,6 @@
 title: Rin1
 ---
-Omo: Sector 21H. I’m in the right place, but where’s the delivery pickup?
+Omo: Sector 21H. I’m in the right place,
 
 Omo:  Is that a ship? It’s not one of ours. Hailing unknown vessel – identify yourself and state your purpose immediately!
 
@@ -18,21 +18,21 @@ Rin: Negative.
 
 Omo: Scans read the escape pod is intact. Why didn’t you eject?
 
-Rin: I haven’t finished my mission. Once my harvest is complete, this ship will carry enough SG4R to power the City for a week.
+Rin: I haven’t finished my mission. Once my harvest is complete, this ship will carry enough SG4R to power the city for a week.
 
-Omo: What city? And what’s SG4R?
+Omo: What city?
 
-Rin: Figures. I shouldn’t expect a colony citizen to know anything. SG4R is used for energy. Beta pilots harvest it from exoplanets for the home world.
+Rin: Figures. I shouldn’t expect a colony citizen to know anything. Nova City, the capital of Beta.
 
-Omo: Beta pilots? You’re from Planet Beta?
+Omo: You’re from Planet Beta?
 
 Rin: Affirmative.
 
 -> Omo: Tell me about Beta.
-<<jump BetaLore>>
+    <<jump BetaLore>>
 
 -> Omo: I won’t leave you stranded here. How can I help?
-<<Rin3>>
+    <<jump Rin3>>
 ===
 
 title: BetaLore
@@ -67,7 +67,7 @@ Rin: Nobody knows exactly where Beta is. It moves through sectors unpredictably.
 
 Rin: Before you leave, do you have anything I can use to fix my ship?
 
--> Omo: I can give you what I was sent here to delivery. Actually, I think it's SG4R!
+-> Omo: I can give you the SG4R I was sent here to deliver.
 <<ModifyResource 2 -10>>
 -> Omo: No, sorry.
 ===
