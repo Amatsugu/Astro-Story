@@ -34,4 +34,11 @@ public class PlanetInteraction : MonoBehaviour
 			return;
 		GameManager.ClearSelectedPlanet();
 	}
+
+	private void OnTriggerStay(Collider other)
+	{
+		if (!other.CompareTag("Player"))
+			return;
+		GameManager.SetActivePlanet(planet);
+	}
 }

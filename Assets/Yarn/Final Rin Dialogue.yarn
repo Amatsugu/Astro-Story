@@ -1,4 +1,4 @@
-title: RinFinal
+title: RinFinal1
 ---
 Rin: Hello again, Omo.
 
@@ -10,8 +10,8 @@ Omo: Ava!
 
 Rin: Yes, Ava. It seems I’m in both of your debt. Congratulations on making it to Beta.
 
--> Omo: Thank you. It’s good to finally be back
--> Omo: I’m here despite my better judgment.
+-> Omo: Thank you! I'm happy to finally see Beta.
+-> Omo: I’m only here to save the day, then I'm headed back to Alpha.
 
 Rin: Now, to business. Beta has a very small supply of natural resources. We need everything we can get. If you collected resources during your travels, will you share them with the citizens of our planet?
 <<if HasResource(0, 50) and HasResource(1, 50) and HasResource(2, 50)>>

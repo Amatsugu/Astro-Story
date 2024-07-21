@@ -3,13 +3,13 @@ title: Sim1
 <<declare $SimQuestComplete = false>>
 Sim: Where did I put that wrench? Oh! I didn’t see you there. Welcome to my humble domicile. What do you require?
 
-Omo: You can repair my ship, right?
+Omo: I need to fix a part of my ship.
 
 Sim: You've come to the right place. I'm the best mechanic this side of the Daedalus Cluster. What seems to be the problem?
 
-Omo: I need to fix my nav system.
+Omo: My nav system is damaged.
 
-Sim: Certainly. But first, let's discuss compensation.
+Sim: Understood. But first, let's discuss compensation.
 
 Omo: Is this enough?
 
@@ -38,14 +38,15 @@ Sim: You’ve returned! I trust you harvested a sufficient amount of Quirkstone?
 
 title: Sim3
 ---
-<<if $EnuQuestComplete>>
+<<if $SimQuestComplete>>
 Sim: If you need anything else, you know where to find me. A good rotation to you.
 
 Omo: And a good rotation to you as well.
 <<else>>
 Sim: As promised, one fully functional navigation system!
 <<SetCompass Beta>>
+<<Modify Resource (1, -50)>>
 Omo: Thank you!
-<<Set $EnuQuestComplete to true>>
+<<set $SimQuestComplete to true>>
 <<endif>>
 ===

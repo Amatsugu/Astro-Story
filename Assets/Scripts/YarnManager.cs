@@ -9,7 +9,7 @@ public class YarnManager : MonoBehaviour
     static YarnManager _instance;
     static public YarnManager Instance => _instance;
 
-    int[] dialogueProgress = new int[6] { 1, 1, 1, 1, 1, 1 };
+    int[] dialogueProgress = new int[5] { 1, 1, 1, 1, 1 };
     [SerializeField] int[] dialogueLimits;
 
     [SerializeField] DialogueRunner dialogueRunner;
@@ -29,7 +29,6 @@ public class YarnManager : MonoBehaviour
         Gamma,
         Delta,
         Epsilon,
-        Zeta
     }
 
     string GetNodeName(Planet interlocutor) 

@@ -11,20 +11,24 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager Instance { get; private set; }
 	public static bool IsInDialouge => Instance._isInDialouge;
+	public static bool IsEnd => Instance._isEnd;
 
 	public InputActionReference interactAction;
 
 	public Transform player;
+	public GameObject endScreen;
 	public YarnManager.Planet? selectedPlanet;
 	public TextMeshProUGUI prompt;
 	public CinemachineVirtualCamera planetCamera;
 
 	private Dictionary<YarnManager.Planet, Transform> _planets;
 	private bool _isInDialouge;
+	private bool _isEnd;
 
 	private void Awake()
 	{
 		Instance = this;
+		endScreen.SetActive(false);
 		_planets = new();
 	}
 
@@ -40,6 +44,7 @@ public class GameManager : MonoBehaviour
 
 	private void Start()
 	{
+		Debug.Log("Game Start");
 #if DEBUG
 		var first = GetPlanet(YarnManager.Planet.Alpha);
 		if (first != null)
@@ -47,7 +52,7 @@ public class GameManager : MonoBehaviour
 #endif
 
 		planetCamera.gameObject.SetActive(false);
-		interactAction.action.performed += Interact;
+		interactAction.action.started += Interact;
 
 		HidePrompt();
 		selectedPlanet = YarnManager.Planet.Alpha;
@@ -75,13 +80,14 @@ public class GameManager : MonoBehaviour
 		Debug.Log("Dialouge Stop");
 		_isInDialouge = false;
 		planetCamera.gameObject.SetActive(false);
+		selectedPlanet = null;
 		MusicManager.PlayMainTheme();
 		Compass.Show();
 	}
 
 	private void Interact(InputAction.CallbackContext context)
 	{
-		if (IsInDialouge)
+		if (_isInDialouge)
 			return;
 		if (selectedPlanet is YarnManager.Planet planet)
 		{
@@ -105,12 +111,29 @@ public class GameManager : MonoBehaviour
 	{
 		if (IsInDialouge)
 			return;
-		prompt.SetText(selectedPlanet?.ToString() ?? "Interact");
+		prompt.SetText(selectedPlanet == null ? "Interact" : GetPlanetNameString((YarnManager.Planet)selectedPlanet));
 		prompt.gameObject.SetActive(true);
+	}
+
+	private string GetPlanetNameString(YarnManager.Planet planet)
+	{
+		var color = planet switch
+		{
+			YarnManager.Planet.Alpha => "#e657b4",
+			YarnManager.Planet.Beta => "#e6c210",
+			YarnManager.Planet.Gamma => "#008c07",
+			YarnManager.Planet.Delta => "#a8133d",
+			YarnManager.Planet.Epsilon => "#7a340b",
+			_ => "#ffffff"
+		};
+
+		return $"<color={color}>{planet}</color>";
 	}
 
 	public static void SetActivePlanet(YarnManager.Planet planet)
 	{
+		if(Instance.selectedPlanet == planet) 
+			return;
 		Instance.selectedPlanet = planet;
 		Instance.ShowPrompt();
 	}
@@ -126,5 +149,11 @@ public class GameManager : MonoBehaviour
 		if (Instance._planets.TryGetValue(planet, out var transform))
 			return transform;
 		return null;
+	}
+
+	public static void ShowEndScreen()
+	{
+		Instance.endScreen.SetActive(true);
+		Instance._isEnd = true;
 	}
 }

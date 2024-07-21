@@ -35,12 +35,10 @@ public class Invisible : MonoBehaviour
 
 	private void OnTriggerStay(Collider other)
 	{
-		Debug.Log(other.tag);
 		if (!other.CompareTag("Player"))
 			return;
 
 		var d = Vector3.Distance(_transform.position, other.transform.position) / detectionRange;
-		Debug.Log(d);
 		SetOpacity(1 - d);
 	}
 

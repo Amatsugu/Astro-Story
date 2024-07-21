@@ -33,4 +33,13 @@ public class Loader : MonoBehaviour
 #endif
 		}
 	}
+
+#if !UNITY_EDITOR
+	public void Start()
+	{
+		foreach (var (path, index) in scenePaths)
+			SceneManager.LoadScene(index, LoadSceneMode.Additive);
+		Debug.Log("Scenes Loaded");
+	}
+#endif
 }
