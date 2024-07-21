@@ -1,0 +1,69 @@
+title: Rin1
+---
+Omo: Sector 21H. I’m in the right place, but where’s the delivery pickup?
+
+Omo:  Is that a ship? It’s not one of ours. Hailing unknown vessel – identify yourself and state your purpose immediately!
+
+Unknown Captain: Transmission received. This is Captain Rin, identifier sequence C4K3.
+
+Omo: Hello, Rin. My name’s Omo, identifier sequence… none? I was sent here from Planet Alpha to make a delivery. Are you my contact?
+
+Rin: Delivery? Negative. My ship was damaged passing through an asteroid belt. There’s no one here besides you and me.
+
+Omo: Then how did Ava know?
+
+Omo: Never mind. Is your ship operational?
+
+Rin: Negative.
+
+Omo: Scans read the escape pod is intact. Why didn’t you eject?
+
+Rin: I haven’t finished my mission. Once my harvest is complete, this ship will carry enough SG4R to power the City for a week.
+
+Omo: What city? And what’s SG4R?
+
+Rin: Figures. I shouldn’t expect a colony citizen to know anything. SG4R is used for energy. Beta pilots harvest it from exoplanets for the home world.
+
+Omo: Beta pilots? You’re from Planet Beta?
+
+Rin: Affirmative.
+
+-> Omo: Tell me about Beta.
+<<jump BetaLore>>
+
+-> Omo: I won’t leave you stranded here. How can I help?
+<<Rin3>>
+===
+
+title: BetaLore
+---
+Rin: There’s not much to tell.
+
+Omo: Please, just tell me anything.
+
+Rin: Beta is a planet with people, same as any other inhabited world. Why do you want to know?
+
+Omo: I was born on Beta. But I don’t remember it, and my parents… aren’t around. You’re the first person I’ve met who’s also from there.
+
+Rin: Hmm. Then I’ll tell you the truth. Most of the planet is still unmapped. We don’t know why half the things on Beta are the way they are - like why there’s a dearth of raw resources on the surface. The planet’s peculiarities are why we focused on leaving it rather than exploring it. You were lucky to live on a colony world.
+
+-> Omo: Beta sounds amazing. I must see it.
+-> Omo: Beta sounds terrible. Besides, nothing could be better than Alpha.
+
+Rin: Now, are we going to talk all rotation or are you going to help another Beta pilot out?
+
+Omo: What can I do?
+===
+
+title: Rin2
+---
+Rin: I need you to take the SG4R back to Beta.
+
+-> Omo: No. I don’t want anything to do with Beta.
+    Rin: Then you’ll let innocent people starve?
+    Omo: Fine, I’ll help, but I don’t even know where Beta is!
+
+-> Omo: I want to help, but I don’t even know where Beta is!
+
+Rin: Nobody knows exactly where Beta is. It moves through sectors unpredictably. That’s one of its many mysteries. You need a Beta nav system to find the planet, and mine was damaged. I’ll send over the last known location, but you’ll have to find it on your own.
+===

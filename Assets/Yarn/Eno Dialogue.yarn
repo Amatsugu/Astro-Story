@@ -1,0 +1,31 @@
+﻿title: Eno1
+---
+Omo: Could anyone live in this stale swamp?
+Omo: Anyone here!? Hello!
+Enu: Here one infringes on a foreign world with one's metal shoes, thanklessly offends the very air one breaths and bothers inhabitants with one's clamor.
+Enu: Does one need help? Maybe pointing the way out?
+Omo: Oho! Apologies for disturbing your magnificent beard mister. 
+Enu: ...
+Enu: One's apology is accepted. I am Enu the sole inhabitant of this planet and the guardian of its secrets.
+Omo: Omo the astrocourier at your service.
+Enu: Or so I may hope, actually! If one was interested to help an old cultivator out?
+Omo: Try me... Once I know what's the task?
+Enu: The only flora which is not available on this planet is Voidmoss. Yet it has multiple wonderful properties.
+Enu: I couldn't nab any since a traveler brought me some thousands of moons ago. 50 bunches would go along way!
+-> These creepers? Sure, I keep stumbling upon them.
+	<<jump Eno2>>
+-> No promises. You are not the only one in need of these.
+
+===
+
+title: Eno2
+---
+<<if 1==1>> //[EnoughResource]
+	Enu: This will do! And I did not miss one's kindness.
+	Enu: There is a well-guarded secret this planet holds which will help invigorate one's ship.
+	Enu: A recipe for oil that makes a potent fuel. Simply try it!
+	Omo: Wild! Sounds great!
+<<else>>
+	Enu: Keep stalking them, you're doing great!
+<<endif>>
+===
