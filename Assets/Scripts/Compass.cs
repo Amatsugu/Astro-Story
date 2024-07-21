@@ -30,14 +30,16 @@ public class Compass : MonoBehaviour
     {
 		if (target == null)
 			return;
-
-		display.transform.LookAt(target.position);
+		var pos = target.position;
+		pos.y = 0;
+		display.transform.LookAt(pos);
     }
 
 	public static void SetTarget(Transform transform)
 	{
 		Inst.target = transform;
 		Inst.display.SetActive(true);
+		Debug.Log($"Setting Compass target to <color='white'>{transform.name}</color>", transform);
 	}
 
 	public static void ClearTarget()
