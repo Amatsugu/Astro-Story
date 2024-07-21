@@ -654,11 +654,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueView: {fileID: 1288951357}
-  continueActionType: 3
+  continueActionType: 4
   continueActionKeyCode: 32
   continueActionButtonName: Jump
   continueActionOnButtonRelease: 0
-  continueActionReference: {fileID: 0}
+  continueActionReference: {fileID: 4741082376598488411, guid: 891855b307d7bc244a16980b0e5d7eab,
+    type: 3}
   continueAction:
     m_Name: Skip
     m_Type: 1
