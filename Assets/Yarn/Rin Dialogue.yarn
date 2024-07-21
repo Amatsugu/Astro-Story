@@ -32,7 +32,7 @@ Rin: Affirmative.
 <<jump BetaLore>>
 
 -> Omo: I won’t leave you stranded here. How can I help?
-<<jump Rin2>>
+<<Rin3>>
 ===
 
 title: BetaLore
@@ -57,13 +57,17 @@ Omo: What can I do?
 
 title: Rin2
 ---
-Rin: I need you to take the SG4R back to Beta.
+Rin: I need you to take the resources I was going to gather back to Beta.
 
 -> Omo: No. I don’t want anything to do with Beta.
-    Rin: Then you’ll let innocent people starve?
+    Rin: Then you’ll let innocent people go without power?
     Omo: Fine, I’ll help, but I don’t even know where Beta is!
-
 -> Omo: I want to help, but I don’t even know where Beta is!
+Rin: Nobody knows exactly where Beta is. It moves through sectors unpredictably. That’s one of its many mysteries. You need a Beta nav system to find the planet, and mine was damaged. I’ll give you my nav, but the rest is up to you.
 
-Rin: Nobody knows exactly where Beta is. It moves through sectors unpredictably. That’s one of its many mysteries. You need a Beta nav system to find the planet, and mine was damaged. I’ll send over the last known location, but you’ll have to find it on your own.
+Rin: Before you leave, do you have anything I can use to fix my ship?
+
+-> Omo: I can give you what I was sent here to delivery. Actually, I think it's SG4R!
+<<ModifyResource -10>>
+-> Omo: No, sorry.
 ===
