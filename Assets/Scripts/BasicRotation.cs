@@ -26,7 +26,8 @@ public class BasicRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+		if (GameManager.IsInDialouge)
+			return;
         planet2Moons.transform.Rotate(.05f, .0099f, 0, Space.Self);
         planet1.transform.Rotate(0, 0.0005f, 0);
         planet2.transform.Rotate(0, 0.0005f, 0);
