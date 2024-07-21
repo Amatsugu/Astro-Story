@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
 
 	private void Start()
 	{
+		Debug.Log("Game Start");
 #if DEBUG
 		var first = GetPlanet(YarnManager.Planet.Alpha);
 		if (first != null)
