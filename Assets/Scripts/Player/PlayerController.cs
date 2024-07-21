@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
-
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -54,6 +53,8 @@ public class PlayerController : MonoBehaviour
 			_audioSource.Play();
 	}
 
+	
+
 	private void Steer(InputAction.CallbackContext context)
 	{
 		_steer = context.ReadValue<float>();
@@ -67,6 +68,8 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	private void Update()
 	{
+		if (GameManager.IsInDialouge)
+			return;
 		var curMaxSpeed = speed;
 
 		if (_thrust != 0)
@@ -91,9 +94,9 @@ public class PlayerController : MonoBehaviour
 				_curTurnSpeed += turnDrag * Time.deltaTime;
 		}
 
-		if(_curTurnSpeed > maxTurnSpeed)
+		if (_curTurnSpeed > maxTurnSpeed)
 			_curTurnSpeed = maxTurnSpeed;
-		if(_curTurnSpeed < -maxTurnSpeed)
+		if (_curTurnSpeed < -maxTurnSpeed)
 			_curTurnSpeed = -maxTurnSpeed;
 
 		_curSpeed = Mathf.Clamp(_curSpeed, 0, curMaxSpeed);
