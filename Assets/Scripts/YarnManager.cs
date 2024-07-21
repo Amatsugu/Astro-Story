@@ -55,6 +55,9 @@ public class YarnManager : MonoBehaviour
             case Planet.Delta:
                 return "Eno";
 
+            case Planet.Epsilon:
+                return "Rin";
+
             default:
                 return "Error";
         }
