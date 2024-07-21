@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using UnityEngine;
+using Yarn.Unity;
 
 public class ResourceTracker 
 {
@@ -35,6 +36,7 @@ public class ResourceTracker
 	/// </summary>
 	/// <param name="type"></param>
 	/// <param name="amount">Positive values add, negative values remove</param>
+	[YarnCommand("ModifyResource")]
 	public static int ModifyResource(Resource type, int amount)
 	{
 		Inst._resources[type] += amount;
@@ -49,17 +51,19 @@ public class ResourceTracker
 	/// <param name="type"></param>
 	/// <param name="qty"></param>
 	/// <returns></returns>
+	[YarnFunction("HasResource")]
 	public static bool HasResource(Resource type, int qty = 1) 
 	{ 
 		return Inst._resources[type] >= qty;
 	}
 
-	/// <summary>
-	/// Get the current qty of a specific resource
-	/// </summary>
-	/// <param name="type"></param>
-	/// <returns></returns>
-	public static int GetResouceCount(Resource type)
+    /// <summary>
+    /// Get the current qty of a specific resource
+    /// </summary>
+    /// <param name="type"></param>
+    /// <returns></returns>
+    [YarnFunction("GetResource")]
+    public static int GetResouceCount(Resource type)
 	{
 		return Inst._resources[type];
 	}
