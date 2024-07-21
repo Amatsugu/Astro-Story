@@ -57,11 +57,13 @@ public class GameManager : MonoBehaviour
 	{
 		if(selectedPlanet is YarnManager.Planet planet)
 		{
+			HidePrompt();
 			planetCamera.gameObject.SetActive(true);
 			var target = GetPlanet(planet);
 			planetCamera.LookAt = target;
 			planetCamera.Follow = target;
 			Compass.Hide();
+			MusicManager.PlayThemeFor(planet);
 		}
 		_isInDialouge = true;
 	}
@@ -70,6 +72,7 @@ public class GameManager : MonoBehaviour
 	{
 		_isInDialouge = false;
 		planetCamera.gameObject.SetActive(false);
+		MusicManager.PlayMainTheme();
 		Compass.Show();
 	}
 
@@ -99,6 +102,8 @@ public class GameManager : MonoBehaviour
 
 	private void ShowPrompt()
 	{
+		if(!IsInDialouge)
+			return;
 		prompt.SetActive(true);
 	}
 
@@ -120,4 +125,5 @@ public class GameManager : MonoBehaviour
 			return transform;
 		return null;
 	}
+
 }
