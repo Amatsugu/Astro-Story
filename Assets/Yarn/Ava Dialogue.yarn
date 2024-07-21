@@ -30,5 +30,6 @@ Ava: I have a feeling the time will come.
 -> Omo: Try me.
 Ava: Alright. Here, don't forget the delivery. Off you go.
 <<ModifyResource 2 10>>
+<<SetCompass Epsilon>>
 Ava: And remember to keep an eye out for Quirkstone and Voidmoss out there. Never know when it may come in handy.
 ===
