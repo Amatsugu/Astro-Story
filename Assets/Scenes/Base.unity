@@ -2605,10 +2605,10 @@ MonoBehaviour:
   mixer: {fileID: -1609723075155175674, guid: 27f04e1f6f295d64fbe202fc4bc6509f, type: 2}
   fadeDuration: 1
   planetMusic:
-  - planet: 0
-    clip: {fileID: 8300000, guid: dc4ed3a2ced485643a280999aac94160, type: 3}
-  - planet: 0
-    clip: {fileID: 8300000, guid: dc4ed3a2ced485643a280999aac94160, type: 3}
+  - planet: 2
+    clip: {fileID: 8300000, guid: 8a0eea50ba0d89749adb96f19bdc5eae, type: 3}
+  - planet: 3
+    clip: {fileID: 8300000, guid: 4db7f800b375cf64486b0048e896b777, type: 3}
 --- !u!1 &1881795600
 GameObject:
   m_ObjectHideFlags: 0
