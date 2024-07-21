@@ -47,7 +47,7 @@ public class YarnManager : MonoBehaviour
                 return "Ava";
 
             case Planet.Beta:
-                return "Rin";
+                return "RinFinal";
 
             case Planet.Gamma:
                 return "Sim";
