@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public class PlanetInteraction : MonoBehaviour
 {
-	public float range;
+	public float range = 1.5f;
 	public YarnManager.Planet planet;
 
 	private void OnValidate()
