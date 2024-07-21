@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2073257612312280383}
   - component: {fileID: 6920023872781812582}
   - component: {fileID: 6309679737252394242}
-  - component: {fileID: 6858673951160251950}
+  - component: {fileID: 4580502076967611991}
   - component: {fileID: 9009448223130748779}
   m_Layer: 0
   m_Name: SG4R
@@ -85,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6858673951160251950
-CapsuleCollider:
+--- !u!135 &4580502076967611991
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -103,10 +103,8 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
+  serializedVersion: 3
+  m_Radius: 2
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &9009448223130748779
 MonoBehaviour:
