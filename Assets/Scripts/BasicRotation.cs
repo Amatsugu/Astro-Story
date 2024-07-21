@@ -10,6 +10,10 @@ public class BasicRotation : MonoBehaviour
     public GameObject planet3;
     public GameObject planet4;
     public GameObject planet5;
+    public GameObject planet6;
+    public GameObject donut;
+    public GameObject crashedShip;
+    public GameObject ship;
 
 
 
@@ -25,10 +29,13 @@ public class BasicRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (GameManager.IsInDialouge)
-			return;
-        planet2Moons.transform.Rotate(.05f, .0099f, 0, Space.Self);
-        planet1.transform.Rotate(0, 0.0005f, 0);
+        if (GameManager.IsInDialouge)
+            return;
+
+        planet2Moons.transform.Rotate(.02f, .0055f, 0, Space.Self);
+        donut.transform.Rotate(.05f, .0044f, 0, Space.Self);
+        crashedShip.transform.Rotate(.05f, .0044f, 0, Space.Self);
+        ship.transform.Rotate(.05f, .0044f, 0, Space.Self);
         planet2.transform.Rotate(0, 0.0005f, 0);
         planet3.transform.Rotate(0, 0.0005f, 0);
         planet4.transform.Rotate(0, 0.0005f, 0);
