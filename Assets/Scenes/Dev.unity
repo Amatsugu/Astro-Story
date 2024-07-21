@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87cb65629db35c54b9eaa8fe80c4b70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 3.62
+  range: 4.79
   planet: 0
 --- !u!135 &604234252
 SphereCollider:
@@ -294,7 +294,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 3.62
+  m_Radius: 4.79
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2110634023
 GameObject:

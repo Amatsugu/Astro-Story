@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
 
 	public void OnDialougeStart()
 	{
+		Debug.Log("Dialouge Start");
 		if(selectedPlanet is YarnManager.Planet planet)
 		{
 			HidePrompt();
@@ -70,6 +71,7 @@ public class GameManager : MonoBehaviour
 
 	public void OnDialougeStop()
 	{
+		Debug.Log("Dialouge Stop");
 		_isInDialouge = false;
 		planetCamera.gameObject.SetActive(false);
 		MusicManager.PlayMainTheme();
@@ -102,7 +104,7 @@ public class GameManager : MonoBehaviour
 
 	private void ShowPrompt()
 	{
-		if(!IsInDialouge)
+		if(IsInDialouge)
 			return;
 		prompt.SetActive(true);
 	}
