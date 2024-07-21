@@ -6473,7 +6473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 9.68, z: -6.34}
+  m_FollowOffset: {x: 0, y: 9.68, z: -6.8}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -6501,7 +6501,7 @@ MonoBehaviour:
   m_HorizontalDamping: 0.5
   m_VerticalDamping: 0.5
   m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenY: 0.65
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_SoftZoneWidth: 0
@@ -22840,6 +22840,10 @@ MonoBehaviour:
   planet3: {fileID: 17910545}
   planet4: {fileID: 1877139758}
   planet5: {fileID: 1402227769}
+  planet6: {fileID: 0}
+  donut: {fileID: 0}
+  crashedShip: {fileID: 0}
+  ship: {fileID: 0}
 --- !u!1 &1488783322
 GameObject:
   m_ObjectHideFlags: 0
@@ -28952,8 +28956,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077952639}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.24355568, y: 0.75554764, z: -0.40832573, w: 0.45066452}
-  m_LocalPosition: {x: -289.28854, y: 9.68, z: -16.55746}
+  m_LocalRotation: {x: 0.19639277, y: 0.79320383, z: -0.32925585, w: 0.47312593}
+  m_LocalPosition: {x: -289.6933, y: 9.68, z: -16.338884}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
