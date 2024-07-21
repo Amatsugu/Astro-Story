@@ -396,6 +396,16 @@ PrefabInstance:
       propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3421662341208397770, guid: 9db9b1a432e96dc4684385386d17ecf8,
+        type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421662341208397770, guid: 9db9b1a432e96dc4684385386d17ecf8,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3542570407464676873, guid: 9db9b1a432e96dc4684385386d17ecf8,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1434,8 +1444,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169393011}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.4, y: 0, z: -103.7}
+  m_LocalRotation: {x: 0, y: 0.85882586, z: 0, w: 0.5122677}
+  m_LocalPosition: {x: 82.04, y: 0, z: -121.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1443,7 +1453,7 @@ Transform:
   - {fileID: 1129785974}
   - {fileID: 578550697}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 118.37, z: 0}
 --- !u!54 &1169393013
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2864,8 +2874,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077952639}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.47544658, y: -0.000000052436874, z: 0.000000028338828, w: 0.87974465}
-  m_LocalPosition: {x: 26.4, y: 9.68, z: -110.03999}
+  m_LocalRotation: {x: 0.24355568, y: 0.75554764, z: -0.40832573, w: 0.45066452}
+  m_LocalPosition: {x: 76.46145, y: 9.68, z: -118.48746}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

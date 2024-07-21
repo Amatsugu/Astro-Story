@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
 		if( first != null )
 			Compass.SetTarget(first);
 #endif
+
 	}
 
 	private void Start()
@@ -47,6 +48,9 @@ public class GameManager : MonoBehaviour
 		interactAction.action.performed += Interact;
 
 		HidePrompt();
+		selectedPlanet = YarnManager.Planet.Alpha;
+		YarnManager.RunDialogue(YarnManager.Planet.Alpha);
+
 	}
 
 	public void OnDialougeStart()
