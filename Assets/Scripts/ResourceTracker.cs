@@ -36,38 +36,54 @@ public class ResourceTracker
 	/// </summary>
 	/// <param name="type"></param>
 	/// <param name="amount">Positive values add, negative values remove</param>
-	[YarnCommand("ModifyResource")]
-	public static void ModifyResource(Resource type, int amount)
+	public static int ModifyResource(Resource type, int amount)
 	{
 		Inst._resources[type] += amount;
 		if(Inst._resources[type] < 0)
 			Inst._resources[type] = 0;
-		//return Inst._resources[type];
+		return Inst._resources[type];
 	}
 
-	/// <summary>
-	/// Check there is a certain amount of a given resouce type
-	/// </summary>
-	/// <param name="type"></param>
-	/// <param name="qty"></param>
-	/// <returns></returns>
-	[YarnFunction("HasResource")]
-	public static bool HasResource(Resource type, int qty = 1) 
+    [YarnCommand("ModifyResource")]
+    public static void YarnModifyResource(int type, int amount) 
+	{
+		ModifyResource((Resource)type, amount);
+    }
+
+
+    /// <summary>
+    /// Check there is a certain amount of a given resouce type
+    /// </summary>
+    /// <param name="type"></param>
+    /// <param name="qty"></param>
+    /// <returns></returns>
+    public static bool HasResource(Resource type, int qty = 1) 
 	{ 
 		return Inst._resources[type] >= qty;
 	}
+
+    [YarnFunction("HasResource")]
+    public static bool YarnHasResource(int type, int qty=1)
+    {
+		return HasResource((Resource)type, qty);
+    }
 
     /// <summary>
     /// Get the current qty of a specific resource
     /// </summary>
     /// <param name="type"></param>
     /// <returns></returns>
-    [YarnFunction("GetResource")]
     public static int GetResouceCount(Resource type)
 	{
 		return Inst._resources[type];
 	}
 
+    [YarnFunction("GetResource")]
+    public static int YarnGetResouceCount(int type) 
+	{
+		return GetResouceCount((Resource) type);
+
+    }
 
 }
 
