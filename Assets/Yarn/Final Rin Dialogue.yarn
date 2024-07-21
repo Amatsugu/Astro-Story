@@ -14,9 +14,11 @@ Rin: Yes, Ava. It seems I’m in both of your debt. Congratulations on making it
 -> Omo: I’m here despite my better judgment.
 
 Rin: Now, to business. Beta has a very small supply of natural resources. We need everything we can get. If you collected resources during your travels, will you share them with the citizens of our planet?
-<<if HasResource(50, 50, 50)>>
+<<if HasResource(0, 50) and HasResource(1, 50) and HasResource(2, 50)>>
 -> Omo: I have SG4R, Quirkstone and Voidmoss. I’ll give you as much as possible.
-	<<ModifyResource -50,-50 -50>>
+	<<ModifyResource 0 -50>>
+	<<ModifyResource 1 -50>>
+	<<ModifyResource 2 -50>>
 	Rin: That’s wonderful! Those resources will go to good use.
 	Omo: I’m glad I could help.
 	Rin: Now what will you do?
