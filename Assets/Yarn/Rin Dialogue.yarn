@@ -63,11 +63,12 @@ Rin: I need you to take the resources I was going to gather back to Beta.
     Rin: Then you’ll let innocent people go without power?
     Omo: Fine, I’ll help, but I don’t even know where Beta is!
 -> Omo: I want to help, but I don’t even know where Beta is!
-Rin: Nobody knows exactly where Beta is. It moves through sectors unpredictably. That’s one of its many mysteries. You need a Beta nav system to find the planet, and mine was damaged. I’ll give you my nav, but the rest is up to you.
+Rin: Nobody knows exactly where Beta is. It moves through sectors unpredictably. That’s one of its many mysteries. 
+Rin: You need a Beta nav system to find the planet, and mine was damaged. I can give it to you, but finding someone who can fix it is up to you.
 
 Rin: Before you leave, do you have anything I can use to fix my ship?
 
 -> Omo: I can give you the SG4R I was sent here to deliver.
-<<ModifyResource 2 -10>>
+    <<ModifyResource 2 -10>>
 -> Omo: No, sorry.
 ===
