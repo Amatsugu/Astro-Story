@@ -7,14 +7,14 @@ using Yarn.Unity;
 public class YarnManager : MonoBehaviour
 {
     static YarnManager _instance;
-    public static YarnManager Instance => _instance;
+    static public YarnManager Instance => _instance;
 
     int[] dialogueProgress = new int[6] { 1, 1, 1, 1, 1, 1 };
     [SerializeField] int[] dialogueLimits;
 
     [SerializeField] DialogueRunner dialogueRunner;
 
-    public static void RunDialogue(Planet interlocutor) 
+    static public void RunDialogue(Planet interlocutor) 
     {
         _instance.dialogueRunner.gameObject.SetActive(true);
         _instance.dialogueRunner.StartDialogue(_instance.GetNodeName(interlocutor));
@@ -57,7 +57,6 @@ public class YarnManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
-        dialogueRunner = FindFirstObjectByType<DialogueRunner>();
     }
 
 }
