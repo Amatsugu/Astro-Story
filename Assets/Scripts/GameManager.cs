@@ -1,3 +1,5 @@
+using Cinemachine;
+
 using System.Collections;
 using System.Collections.Generic;
 
@@ -9,11 +11,13 @@ public class GameManager : MonoBehaviour
 	public static GameManager Instance { get; private set; }
 	public static bool IsInDialouge => Instance._isInDialouge;
 
-	public PlayerInput input;
+	public InputActionReference interactAction;
+
+	public Transform player;
 	public YarnManager.Planet? selectedPlanet;
 	public GameObject prompt;
+	public CinemachineVirtualCamera planetCamera;
 
-	private InputAction _interactAction;
 	private Dictionary<YarnManager.Planet, Transform> _planets;
 	private bool _isInDialouge;
 
@@ -39,19 +43,30 @@ public class GameManager : MonoBehaviour
 
 	private void Start()
 	{
-		_interactAction = input.actions.FindAction("Interact");
-		_interactAction.performed += Interact;
+		planetCamera.gameObject.SetActive(false);
+		interactAction.action.performed += Interact;
+
 		HidePrompt();
 	}
 
 	public void OnDialougeStart()
 	{
+		if(selectedPlanet is YarnManager.Planet planet)
+		{
+			planetCamera.gameObject.SetActive(true);
+			var target = GetPlanet(planet);
+			planetCamera.LookAt = target;
+			planetCamera.Follow = target;
+			Compass.Hide();
+		}
 		_isInDialouge = true;
 	}
 
 	public void OnDialougeStop()
 	{
 		_isInDialouge = false;
+		planetCamera.gameObject.SetActive(false);
+		Compass.Show();
 	}
 
 	private void Interact(InputAction.CallbackContext context)
@@ -69,6 +84,8 @@ public class GameManager : MonoBehaviour
 	{
 		if (selectedPlanet == null)
 			return;
+
+
 	}
 
 	private void HidePrompt()

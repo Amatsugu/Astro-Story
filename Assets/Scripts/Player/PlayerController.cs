@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
 
 	public float maxPitch = 1.2f;
 
+	[Header("Input")]
+	public InputActionReference steerAction;
+	public InputActionReference thrustAction;
+
 	private float _curSpeed;
 	private float _curTurnSpeed;
 	private float _steer;
@@ -29,25 +33,19 @@ public class PlayerController : MonoBehaviour
 
 	private Transform _transform;
 	private AudioSource _audioSource;
-	private PlayerInput _playerInput;
-	private InputAction _steerAction;
-	private InputAction _thrustAction;
 
 	// Start is called before the first frame update
 	private void Start()
 	{
 		_transform = transform;
 		_audioSource = GetComponent<AudioSource>();
-		_playerInput = GetComponent<PlayerInput>();
-		_steerAction = _playerInput.actions.FindAction("Steer");
-		_thrustAction = _playerInput.actions.FindAction("Thrust");
 
-		_steerAction.started += Steer;
-		_steerAction.canceled += Steer;
-		_steerAction.performed += Steer;
-		_thrustAction.started += Thrust;
-		_thrustAction.canceled += Thrust;
-		_thrustAction.performed += Thrust;
+		steerAction.action.started += Steer;
+		steerAction.action.canceled += Steer;
+		steerAction.action.performed += Steer;
+		thrustAction.action.started += Thrust;
+		thrustAction.action.canceled += Thrust;
+		thrustAction.action.performed += Thrust;
 		_audioSource.loop = true;
 		if (!_audioSource.isPlaying)
 			_audioSource.Play();

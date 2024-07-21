@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Compass : MonoBehaviour
@@ -11,7 +12,7 @@ public class Compass : MonoBehaviour
 	{
 		get
 		{
-			if(_inst == null)
+			if (_inst == null)
 				return _inst = GameObject.FindFirstObjectByType<Compass>();
 			return _inst;
 		}
@@ -25,15 +26,14 @@ public class Compass : MonoBehaviour
 		display.SetActive(target != null);
 	}
 
-
-	void Update()
-    {
+	private void Update()
+	{
 		if (target == null)
 			return;
 		var pos = target.position;
 		pos.y = 0;
 		display.transform.LookAt(pos);
-    }
+	}
 
 	public static void SetTarget(Transform transform)
 	{
@@ -46,5 +46,16 @@ public class Compass : MonoBehaviour
 	{
 		Inst.target = null;
 		Inst.display.SetActive(false);
+	}
+
+	public static void Hide()
+	{
+		Inst.display.SetActive(false);
+	}
+
+	public static void Show()
+	{
+		if (Inst.tag != null)
+			Inst.display.SetActive(true);
 	}
 }
