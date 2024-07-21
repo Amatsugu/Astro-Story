@@ -1,5 +1,6 @@
 ﻿title: Eno1
 ---
+<<declare $EnoQuestComplete = false>>
 Omo: Could anyone live in this stale swamp?
 Omo: Anyone here!? Hello!
 Enu: Here one infringes on a foreign world with one's metal shoes, thanklessly offends the very air one breaths and bothers inhabitants with one's clamor.
@@ -20,9 +21,12 @@ Enu: I couldn't nab any since a traveler brought me some thousands of moons ago.
 
 title: Eno2
 ---
-<<if HasResource(0, 50)>>
+<<if $EnuQuestComplete>>
+	Enu: Godspeed traveller!
+<<elseif HasResource(0, 50)>>
 	Enu: This will do! And I did not miss one's kindness.
 	<<ModifyResource 0 -50>>
+	<<Set $EnuQuestComplete to true>>
 	Enu: There is a well-guarded secret this planet holds which will help invigorate one's ship.
 	Enu: A recipe for oil that makes a potent fuel. Simply try it!
 	Omo: Wild! Sounds great!

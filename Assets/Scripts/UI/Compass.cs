@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
+using Yarn.Unity;
 
 public class Compass : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class Compass : MonoBehaviour
 		display.transform.LookAt(pos);
 	}
 
+
 	public static void SetTarget(Transform transform)
 	{
 		Inst.target = transform;
@@ -42,7 +44,45 @@ public class Compass : MonoBehaviour
 		Debug.Log($"Setting Compass target to <color='white'>{transform.name}</color>", transform);
 	}
 
-	public static void ClearTarget()
+	[YarnCommand("SetCompass")]
+    public static void YarnSetTarget(string planet)
+	{
+		switch (planet) 
+		{
+			case "Alpha":
+
+				SetTarget(GameManager.GetPlanet(YarnManager.Planet.Alpha));
+				break;
+
+			case "Beta":
+
+                SetTarget(GameManager.GetPlanet(YarnManager.Planet.Beta));
+                break;
+
+			case "Gamma":
+
+                SetTarget(GameManager.GetPlanet(YarnManager.Planet.Gamma));
+                break;
+
+            case "Delta":
+
+                SetTarget(GameManager.GetPlanet(YarnManager.Planet.Delta));
+                break;
+
+            case "Epsilon":
+
+                SetTarget(GameManager.GetPlanet(YarnManager.Planet.Epsilon));
+                break;
+
+            case "Zeta":
+
+                SetTarget(GameManager.GetPlanet(YarnManager.Planet.Zeta));
+                break;
+        }
+	}
+
+
+    public static void ClearTarget()
 	{
 		Inst.target = null;
 		Inst.display.SetActive(false);
