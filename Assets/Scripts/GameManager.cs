@@ -3,6 +3,8 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 
+using TMPro;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,7 +17,7 @@ public class GameManager : MonoBehaviour
 
 	public Transform player;
 	public YarnManager.Planet? selectedPlanet;
-	public GameObject prompt;
+	public TextMeshProUGUI prompt;
 	public CinemachineVirtualCamera planetCamera;
 
 	private Dictionary<YarnManager.Planet, Transform> _planets;
@@ -99,14 +101,15 @@ public class GameManager : MonoBehaviour
 
 	private void HidePrompt()
 	{
-		prompt.SetActive(false);
+		prompt.gameObject.SetActive(false);
 	}
 
 	private void ShowPrompt()
 	{
 		if(IsInDialouge)
 			return;
-		prompt.SetActive(true);
+		prompt.SetText(selectedPlanet?.ToString() ?? "Interact");
+		prompt.gameObject.SetActive(true);
 	}
 
 	public static void SetActivePlanet(YarnManager.Planet planet)
