@@ -73,11 +73,6 @@ public class Compass : MonoBehaviour
 
                 SetTarget(GameManager.GetPlanet(YarnManager.Planet.Epsilon));
                 break;
-
-            case "Zeta":
-
-                SetTarget(GameManager.GetPlanet(YarnManager.Planet.Zeta));
-                break;
         }
 	}
 
