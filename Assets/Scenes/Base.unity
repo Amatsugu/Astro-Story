@@ -629,8 +629,54 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4228678124568660923, guid: 9db9b1a432e96dc4684385386d17ecf8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 393311439}
   m_SourcePrefab: {fileID: 100100000, guid: 9db9b1a432e96dc4684385386d17ecf8, type: 3}
+--- !u!1 &393311435 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4228678124568660923, guid: 9db9b1a432e96dc4684385386d17ecf8,
+    type: 3}
+  m_PrefabInstance: {fileID: 275528754}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &393311439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393311435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097b95c9f69f04f2d8c08a817e7786af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueView: {fileID: 1288951357}
+  continueActionType: 3
+  continueActionKeyCode: 32
+  continueActionButtonName: Jump
+  continueActionOnButtonRelease: 0
+  continueActionReference: {fileID: 0}
+  continueAction:
+    m_Name: Skip
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 47e09516-0363-4686-80c3-fa9c076740a0
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 9087c8aa-a056-4f9b-b894-80797fe2d874
+      m_Path: Submit
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Skip
+      m_Flags: 0
+    m_Flags: 0
+  enableActionOnStart: 1
 --- !u!1 &508737020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,7 +1430,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2931621659240353886, guid: 27f04e1f6f295d64fbe202fc4bc6509f,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 388ee4471baa7d6489264ceb943b179b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: da46ba9eb5922ad428fa8664817acfcf, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1652,6 +1698,18 @@ MonoBehaviour:
   m_LegacyHeightOffset: 3.4028235e+38
   m_LegacyHeadingBias: 3.4028235e+38
   m_HeadingIsSlave: 0
+--- !u!114 &1288951357 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8604863779916527506, guid: 9db9b1a432e96dc4684385386d17ecf8,
+    type: 3}
+  m_PrefabInstance: {fileID: 275528754}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddcdd604a328c4ab296f048eb7b3a925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1353050789
 GameObject:
   m_ObjectHideFlags: 0
