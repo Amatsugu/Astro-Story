@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &111677511508361340
+--- !u!1 &7042902610734581067
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4006998269374827910}
-  - component: {fileID: 5353238684049651693}
-  - component: {fileID: 1901847722006956954}
+  - component: {fileID: 6540560684550557501}
+  - component: {fileID: 65000359332776945}
+  - component: {fileID: 9159292910863572198}
   m_Layer: 0
-  m_Name: Collectable
+  m_Name: Voidmoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4006998269374827910
+--- !u!4 &6540560684550557501
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111677511508361340}
+  m_GameObject: {fileID: 7042902610734581067}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 121.5, y: 0, z: -55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2233666104024719361}
+  m_Children:
+  - {fileID: 2288124389802103792}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &5353238684049651693
+--- !u!135 &65000359332776945
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111677511508361340}
+  m_GameObject: {fileID: 7042902610734581067}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -52,24 +53,24 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.49
+  m_Radius: 1.03
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1901847722006956954
+--- !u!114 &9159292910863572198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111677511508361340}
+  m_GameObject: {fileID: 7042902610734581067}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f055a415e49ec3347bce59ec19915dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resource: 2
-  value: 11
-  killParent: 1
---- !u!1 &4767724860146021216
+  resource: 0
+  value: 1
+  killParent: 0
+--- !u!1 &7997407296936371133
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,49 +78,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2233666104024719361}
-  - component: {fileID: 2693182804034730690}
-  - component: {fileID: 6856794720303014132}
-  - component: {fileID: 356114601072754209}
-  - component: {fileID: 6242101970519381067}
+  - component: {fileID: 2288124389802103792}
+  - component: {fileID: 9043829065526323480}
+  - component: {fileID: 8877175987334073411}
+  - component: {fileID: 1861841221851003121}
+  - component: {fileID: 8882835989498378683}
   m_Layer: 0
-  m_Name: Fleeing Collectable
+  m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2233666104024719361
+--- !u!4 &2288124389802103792
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4767724860146021216}
+  m_GameObject: {fileID: 7997407296936371133}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -234.1, y: 0, z: -163.8}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4006998269374827910}
-  m_Father: {fileID: 0}
+  m_Children: []
+  m_Father: {fileID: 6540560684550557501}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2693182804034730690
+--- !u!33 &9043829065526323480
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4767724860146021216}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6856794720303014132
+  m_GameObject: {fileID: 7997407296936371133}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8877175987334073411
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4767724860146021216}
+  m_GameObject: {fileID: 7997407296936371133}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -133,7 +133,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0f87495f7989f524ea312d24391a37b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,13 +155,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &356114601072754209
+--- !u!135 &1861841221851003121
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4767724860146021216}
+  m_GameObject: {fileID: 7997407296936371133}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -174,20 +174,18 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 3
+  m_Radius: 8.25
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6242101970519381067
+--- !u!114 &8882835989498378683
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4767724860146021216}
+  m_GameObject: {fileID: 7997407296936371133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f014b7d8da0ba24aa4d2017320b6ba3, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f2c79d493c529e40aaf8102828e9d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  confinementRange: 22.23
-  fleeRange: 3
-  maxSpeed: 3
+  detectionRange: 8.25
