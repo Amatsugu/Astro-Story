@@ -44,7 +44,7 @@ public class Planet : MonoBehaviour
 			if (_meshFilters[i] == null)
 			{
 				GameObject meshObj = new GameObject("mesh");
-				meshObj.transform.parent = transform;
+				meshObj.transform.SetParent(transform, false);
 
 				meshObj.AddComponent<MeshRenderer>();
 				_meshFilters[i] = meshObj.AddComponent<MeshFilter>();
@@ -56,6 +56,11 @@ public class Planet : MonoBehaviour
 			bool renderFace = faceRenderMask == FaceRenderMask.All || (int)faceRenderMask - 1 == i;
 			_meshFilters[i].gameObject.SetActive(renderFace);
 		}
+	}
+
+	private void Start()
+	{
+		GeneratePlanet();
 	}
 
 	public void OnColorSettingsUpdated()
@@ -85,8 +90,11 @@ public class Planet : MonoBehaviour
 	{
 		for (int i = 0; i < 6; i++)
 		{
-			if(_meshFilters[i].gameObject.activeInHierarchy)
+			if (_meshFilters[i].gameObject.activeInHierarchy)
+			{
 				_terrainFaces[i].ConstructMesh();
+				_meshFilters[i].transform.localPosition = Vector3.zero;
+			}
 		}
 
 		_colorGenerator.UpdateElevation(_shapeGenerator.elevationMinMax);
