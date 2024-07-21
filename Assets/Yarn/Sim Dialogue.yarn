@@ -47,6 +47,6 @@ Sim: As promised, one fully functional navigation system!
 <<SetCompass Beta>>
 <<Modify Resource (1, -50)>>
 Omo: Thank you!
-<<Set $SimQuestComplete to true>>
+<<set $SimQuestComplete to true>>
 <<endif>>
 ===

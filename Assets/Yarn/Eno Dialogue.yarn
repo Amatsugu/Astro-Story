@@ -26,7 +26,7 @@ title: Eno2
 <<elseif HasResource(0, 50)>>
 	Enu: This will do! And I did not miss one's kindness.
 	<<ModifyResource 0 -50>>
-	<<Set $EnuQuestComplete to true>>
+	<<set $EnuQuestComplete to true>>
 	Enu: There is a well-guarded secret this planet holds which will help invigorate one's ship.
 	Enu: A recipe for oil that makes a potent fuel. Simply try it!
 	Omo: Wild! Sounds great!
