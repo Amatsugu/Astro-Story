@@ -631,6 +631,58 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9db9b1a432e96dc4684385386d17ecf8, type: 3}
+--- !u!1 &438538777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 438538779}
+  - component: {fileID: 438538778}
+  m_Layer: 0
+  m_Name: Planet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &438538778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438538777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d94d72b9de715a42b19f2e31951b328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resolution: 30
+  shape: {fileID: 11400000, guid: 3de687e0a7494fc4684095ce07ec51f7, type: 2}
+  color: {fileID: 11400000, guid: 03bca6510ae5e004c8b8bbc24fca8906, type: 2}
+  autoUpdate: 1
+  faceRenderMask: 0
+  shapeSettingsFold: 0
+  ColorSettingsFold: 0
+  _meshFilters: []
+--- !u!4 &438538779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438538777}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1065.3895, y: 741.75995, z: 34.70345}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &508737020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3286,3 +3338,4 @@ SceneRoots:
   - {fileID: 2126841657}
   - {fileID: 508737021}
   - {fileID: 275528754}
+  - {fileID: 438538779}
