@@ -10,7 +10,6 @@ public class BasicRotation : MonoBehaviour
     public GameObject planet3;
     public GameObject planet4;
     public GameObject planet5;
-    public GameObject planet6;
 
 
 
@@ -34,6 +33,5 @@ public class BasicRotation : MonoBehaviour
         planet3.transform.Rotate(0, 0.0005f, 0);
         planet4.transform.Rotate(0, 0.0005f, 0);
         planet5.transform.Rotate(0, 0.0005f, 0);
-        planet6.transform.Rotate(0, 0.0005f, 0);
     }
 }

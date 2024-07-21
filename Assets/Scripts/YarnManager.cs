@@ -29,7 +29,6 @@ public class YarnManager : MonoBehaviour
         Gamma,
         Delta,
         Epsilon,
-        Zeta
     }
 
     string GetNodeName(Planet interlocutor) 

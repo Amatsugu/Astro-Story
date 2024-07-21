@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -47,38 +48,10 @@ public class Compass : MonoBehaviour
 	[YarnCommand("SetCompass")]
     public static void YarnSetTarget(string planet)
 	{
-		switch (planet) 
-		{
-			case "Alpha":
-
-				SetTarget(GameManager.GetPlanet(YarnManager.Planet.Alpha));
-				break;
-
-			case "Beta":
-
-                SetTarget(GameManager.GetPlanet(YarnManager.Planet.Beta));
-                break;
-
-			case "Gamma":
-
-                SetTarget(GameManager.GetPlanet(YarnManager.Planet.Gamma));
-                break;
-
-            case "Delta":
-
-                SetTarget(GameManager.GetPlanet(YarnManager.Planet.Delta));
-                break;
-
-            case "Epsilon":
-
-                SetTarget(GameManager.GetPlanet(YarnManager.Planet.Epsilon));
-                break;
-
-            case "Zeta":
-
-                SetTarget(GameManager.GetPlanet(YarnManager.Planet.Zeta));
-                break;
-        }
+		if (Enum.TryParse<YarnManager.Planet>(planet, out var p))
+			SetTarget(GameManager.GetPlanet(p));
+		else
+			Debug.LogError($"Failed to set compass, could not parse <color=magenta>'{planet}'</color> to a planet");
 	}
 
 
