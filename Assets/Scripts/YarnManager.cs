@@ -9,15 +9,17 @@ public class YarnManager : MonoBehaviour
     static YarnManager _instance;
     public static YarnManager Instance => _instance;
 
-    int[] dialogueProgress = new int[6];
+    int[] dialogueProgress = new int[6] { 1, 1, 1, 1, 1, 1 };
+    [SerializeField] int[] dialogueLimits;
 
-    DialogueRunner dialogueRunner;
+    [SerializeField] DialogueRunner dialogueRunner;
 
     public static void RunDialogue(Planet interlocutor) 
     {
         _instance.dialogueRunner.gameObject.SetActive(true);
         _instance.dialogueRunner.StartDialogue(_instance.GetNodeName(interlocutor));
-        _instance.dialogueProgress[(int)interlocutor]++;
+        int planetIndex = (int)interlocutor;
+        if (_instance.dialogueProgress[planetIndex] < _instance.dialogueLimits[planetIndex]) _instance.dialogueProgress[planetIndex]++;
     }
 
     public enum Planet

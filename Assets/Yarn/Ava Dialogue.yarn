@@ -1,9 +1,10 @@
 title: Ava1
 ---
-Ava: Ready Omo? This one looks like a drill for you.
+Ava: Ready Omo? This one should be a drill for you.
 Omo: Woah, Ava, slow down. I was just going to have a cup of latte.
-Ava: It's okay. But if you get on with it, you wll appreciate by the end of the day.
--> Omo: What even? Okay Pinkielocks, what do you have for me?
+Ava: It's okay. But if you make haste, you'll be glad you did. This one feels odd.
+-> Omo: What even? Okay Pinkilocks, what do you have for me?
+	Ava: ... I swear I will change color one of these days.
 	<<jump Ava1j1>>
 -> Omo: I knew you'd understand. Everyone needs their sip in the morning.
 	Omo: I'm ALIVE girl. Try me!
@@ -12,7 +13,7 @@ Ava: It's okay. But if you get on with it, you wll appreciate by the end of the 
 
 title: Ava1j1
 ---
-Ava: Planet in sector 21H. Be carefull it's uncharted. And it's a delivery, it's nearly ready to pick up.
+Ava: You’ll be flying a delivery to a planet in sector 21H. It is nearly ready to pick up. But you’ll need to be careful; the planet’s uncharted.
 Omo: Is that it? Fine, at that rate I will be back in time for the afternoon gossip. 
 Omo: But first I will give this old shuttle a blaze-about to get a feel of Edu's yoke recalibration.
 Ava: Groovy. Edu told me you can control it with W, S, A, D.
@@ -25,8 +26,8 @@ Ava: Ah yes, I remember. I really thought first thing you would be on your hunt 
 Omo: But why would I? We have all the latte and movie nights here. No need to dwell on past.
 Ava: I have a feeling the time will come.
 -> Omo: Maybe. And I have a feeling I should head to 21H.
--> Omo: Maybe you're right, but no one even knows how to find it anyway.
+-> Omo: Maybe you're right, but no one even knows how to find Beta anyway.
 -> Omo: Try me.
 Ava: Alright. Here, don't forget the delivery. Off you go.
-Ava: And remember to keep an eye out for Quirkstone and Voidmoss out there. 
+Ava: And remember to keep an eye out for Quirkstone and Voidmoss out there. Never know when it may come in handy.
 ===
