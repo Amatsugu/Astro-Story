@@ -68,6 +68,6 @@ Rin: Nobody knows exactly where Beta is. It moves through sectors unpredictably.
 Rin: Before you leave, do you have anything I can use to fix my ship?
 
 -> Omo: I can give you what I was sent here to delivery. Actually, I think it's SG4R!
-<<ModifyResource -10>>
+<<ModifyResource 2 -10>>
 -> Omo: No, sorry.
 ===
