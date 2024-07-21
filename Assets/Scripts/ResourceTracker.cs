@@ -70,7 +70,7 @@ public class ResourceTracker
 
 public enum Resource
 {
-	ResouceA,
-	ResouceB, 
-	ResouceC,
+	Voidmoss,
+	Quirkrock, 
+	SG4R,
 }

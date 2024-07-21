@@ -26,7 +26,6 @@ public class Collectable : MonoBehaviour
 	{
 		ResourceTracker.ModifyResource(resource, value);
 
-		ResourceTracker.ModifyResource(Resource.ResouceA, 10);
 		if(killParent)
 			Destroy(gameObject.transform.parent.gameObject);
 		else
