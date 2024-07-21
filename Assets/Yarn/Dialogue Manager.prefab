@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9114095896333062692}
+  - component: {fileID: 6490486484433429366}
   - component: {fileID: -3279310406009400274}
   m_Layer: 0
   m_Name: Dialogue Manager
@@ -33,6 +34,19 @@ Transform:
   - {fileID: 3509816789104359877}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6490486484433429366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2484980133233323008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1381636fc97974cbdfb908ef018cab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineView: {fileID: 8604863779916527506}
 --- !u!114 &-3279310406009400274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,3 +385,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2060506416894851668}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8604863779916527506 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7778558435068644806, guid: 7f29e5f7ffdea4a6793cefb278b61f0c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2060506416894851668}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddcdd604a328c4ab296f048eb7b3a925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -37,12 +37,12 @@ public class ResourceTracker
 	/// <param name="type"></param>
 	/// <param name="amount">Positive values add, negative values remove</param>
 	[YarnCommand("ModifyResource")]
-	public static int ModifyResource(Resource type, int amount)
+	public static void ModifyResource(Resource type, int amount)
 	{
 		Inst._resources[type] += amount;
 		if(Inst._resources[type] < 0)
 			Inst._resources[type] = 0;
-		return Inst._resources[type];
+		//return Inst._resources[type];
 	}
 
 	/// <summary>

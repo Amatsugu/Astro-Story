@@ -49,6 +49,12 @@ public class YarnManager : MonoBehaviour
             case Planet.Beta:
                 return "Rin";
 
+            case Planet.Gamma:
+                return "Sim";
+
+            case Planet.Delta:
+                return "Eno";
+
             default:
                 return "Error";
         }
