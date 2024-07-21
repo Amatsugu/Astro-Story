@@ -29,6 +29,8 @@ public class BasicRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.IsInDialouge)
+            return;
 
         planet2Moons.transform.Rotate(.02f, .0055f, 0, Space.Self);
         donut.transform.Rotate(.05f, .0044f, 0, Space.Self);
@@ -38,6 +40,5 @@ public class BasicRotation : MonoBehaviour
         planet3.transform.Rotate(0, 0.0005f, 0);
         planet4.transform.Rotate(0, 0.0005f, 0);
         planet5.transform.Rotate(0, 0.0005f, 0);
-        planet6.transform.Rotate(0, 0.0005f, 0);
     }
 }
