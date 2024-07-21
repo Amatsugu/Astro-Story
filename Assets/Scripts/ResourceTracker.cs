@@ -63,7 +63,7 @@ public class ResourceTracker
 	}
 
     [YarnFunction("HasResource")]
-    public static bool YarnHasResource(int type, int qty=1)
+    public static bool YarnHasResource(int type, int qty)
     {
 		return HasResource((Resource)type, qty);
     }
