@@ -31,7 +31,11 @@ public class Compass : MonoBehaviour
 	private void Update()
 	{
 		if (target == null)
+		{
+			if(display.activeInHierarchy)
+				display.SetActive(false);
 			return;
+		}
 		var pos = target.position;
 		pos.y = 0;
 		display.transform.LookAt(pos);
