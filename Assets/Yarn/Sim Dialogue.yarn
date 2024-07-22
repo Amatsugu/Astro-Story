@@ -7,46 +7,40 @@ Omo: I need to fix a part of my ship.
 
 Sim: You've come to the right place. I'm the best mechanic this side of the Daedalus Cluster. What seems to be the problem?
 
-Omo: My nav system is damaged.
+Omo: It's about this nav system.
 
-Sim: Understood. But first, let's discuss compensation.
+Sim: Ah, the wrench was on my belt the entire time! Now, where were we? Oh yes, Beta Nav a rare device. I should ask how you acquired it. Hehe.
 
-Omo: Is this enough?
+Sim: This is an Alpha ship, isn't it? I remember the first time I saw this model… so simple, yet brilliantly functional. 
 
-Sim: Ah, the wrench was on my belt the entire time! Now, where were we? Oh yes, payment. That will do.
+Sim: This nook here is perfect to fit an impact laser, and with an extended battery it could support a race-grade engine. But I digress, those aren't upgrades you're looking for.
 
-Sim: This is an Alpha ship, isn't it? I remember the first time I saw this model… so simple, yet brilliantly functional. I wonder if it could be modified for combat? Or maybe street racing? This nook is perfect to fit an impact laser, and with an extended battery it could support a race-grade engine. But I digress, those aren't the upgrades you're looking for.
+Omo: You are so well versed both in my ship and device. I take it the repair will be complete in no time?
 
-Omo: When will the repairs be complete?
+Sim: Golly! I can fix the system quickly, but have we discussed the payment yet?
 
-Sim: I can fix the system quickly, but I don’t have enough Quirkstone to fabricate the parts. I can’t leave my workshop. Can you collect it for me?
+Sim: 20 Quirkstone will cover my costs and materials. Can you collect it for me?
 
 Omo: Try me!
+<<jump Sim2>>
 ===
 
 title: Sim2
 ---
-Sim: You’ve returned! I trust you harvested a sufficient amount of Quirkstone?
-<<if HasResource (1, 50)>>
--> Omo: Yes.
-    <<jump Sim3>>
-<<else>>
--> Omo: No.
-	Sim: Then you should keep scavenging. I can’t fix the nav without it.
-<<endif>>
-===
-
-title: Sim3
----
 <<if $SimQuestComplete>>
-Sim: If you need anything else, you know where to find me. A good rotation to you.
-
-Omo: And a good rotation to you as well.
+	Sim: If you need anything else, you know where to find me. A good rotation to you.
+	Omo: And a good rotation to you as well.
+<<elseif HasResource (1, 20)>>
+	Omo: This must be enough?
+	Sim: Indeed. A new core... 
+	Sim: And a zap... 
+	Sim: And a seal... 
+	Sim: Ready to boot!
+	<<SetCompass Beta>>
+	<<Modify Resource (1, -20)>>
+	Omo: Thank you!
+	<<set $SimQuestComplete to true>>
 <<else>>
-Sim: As promised, one fully functional navigation system!
-<<SetCompass Beta>>
-<<Modify Resource (1, -50)>>
-Omo: Thank you!
-<<set $SimQuestComplete to true>>
+	Sim: It can all run away from you! But if you can't catch it, maybe there is a way to boost your engine? I cannot do with less than 20.
 <<endif>>
 ===

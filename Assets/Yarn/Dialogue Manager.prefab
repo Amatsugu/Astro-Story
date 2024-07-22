@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc772a824737af243879f01d79794499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueLimits: 0300000001000000030000000200000002000000
+  dialogueLimits: 0300000001000000020000000200000002000000
   dialogueRunner: {fileID: 3257781411064513478}
 --- !u!1001 &2060506416894851668
 PrefabInstance:
