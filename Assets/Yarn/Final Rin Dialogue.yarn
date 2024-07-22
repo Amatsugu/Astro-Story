@@ -8,14 +8,19 @@ Rin: Another Beta pilot found me thanks to a tip from an operator on Alpha.
 
 Omo: Ava!
 
-Rin: Yes, Ava. It seems I’m in both of your debt. Congratulations on making it to Beta.
+Rin: Yes, Ava. It seems I'm in both of your debt. Congratulations on making it to Beta.
 
 -> Omo: Thank you! I'm happy to finally see Beta.
--> Omo: I’m only here to save the day, then I'm headed back to Alpha.
+-> Omo: I'm only here to save the day, then I'm headed back to Alpha.
 
-Rin: Now, to business. Beta has a very small supply of natural resources. We need everything we can get. If you collected resources during your travels, will you share them with the citizens of our planet?
-<<if HasResource(0, 50) and HasResource(1, 50) and HasResource(2, 50)>>
--> Omo: I have SG4R, Quirkstone and Voidmoss. I’ll give you as much as possible.
+Rin: Now, to business. Beta has a very small supply of natural resources. We need everything we can get. 
+<<Jump RinFinal2>>
+
+===
+title: RinFinal2
+---
+Rin: If you collected resources during your travels, will you share them with the citizens of our planet?
+-> Omo: I have SG4R, Quirkstone and Voidmoss. I’ll give you as much as possible. <<if HasResource(0, 50) and HasResource(1, 50) and HasResource(2, 50)>>
 	<<ModifyResource 0 -50>>
 	<<ModifyResource 1 -50>>
 	<<ModifyResource 2 -50>>
@@ -25,26 +30,21 @@ Rin: Now, to business. Beta has a very small supply of natural resources. We nee
            -> Omo: I’ll return to Alpha.
               Rin: It’s a shame you won’t stay on Beta longer. Keep my nav system so you can return at any time. Thank you for your help, Omo. You’re a true child of Beta.
 	            Omo: Thank you, and goodbye for now, Rin.
+				<<End>>
          -> Omo: I’ll stay on Beta!
 		        Rin: You’re welcome to stay as long as you like. Thank you for your help, Omo. You’re a true child of Beta.
+				<<End>>
 	
-    <<else>>
-->Omo: I have SG4R, Quirkstone and Voidmoss. But I can’t give them to you.
+->Omo: I'm just here to see Beta. Then I'm on my way.
 	Rin: I see your loyalties do not lie with Beta after all. A true child of Beta would fulfill their duties and gladly share with their people. Well, what will you do now?
-	       -> Omo: I’ll return to Alpha.
-	         Rin: It’s unlikely we will meet again. Beta is so hard to for colony citizens to find, after all. Goodbye, Omo.
-	         Omo: Goodbye, Rin.
-	    -> Omo: I’d like to explore Beta.
-	          Rin: I don’t think that’s a good idea after what you just said. But I won’t stop you.
-	            Omo: Goodbye, Rin.
--> Omo: No, I don’t have anything.
-	Rin: That’s disappointing, but it can’t be helped.
-	Rin: Well, what will you do now?
-	    -> Omo: I’ll return to Alpha.
-	      Rin: Very well. It is unlikely we’ll meet again. Goodbye, Omo.
-	      Omo: Goodbye, Rin.
-	    -> Omo: I’d like to explore Beta.
-	        Rin: You’re free to do so. For now, goodbye Omo.
-	        Omo: Goodbye, Rin.
-<<endif>>
-    ===
+	-> Omo: I’ll return to Alpha.
+		Rin: It’s unlikely we will meet again. Beta is so hard to for colony citizens to find, after all. Goodbye, Omo.
+	    Omo: Goodbye, Rin.
+		<<End>>
+	-> Omo: I’d like to explore Beta.
+	    Rin: I don’t think that’s a good idea after what you just said. But I won’t stop you.
+	    Omo: Goodbye, Rin.
+		<<End>>
+-> Omo: I'm working on it. Hold on a bit longer.
+===
+
