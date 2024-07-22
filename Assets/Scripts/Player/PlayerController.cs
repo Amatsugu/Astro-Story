@@ -4,6 +4,7 @@ using System.IO;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Yarn.Unity;
 
 public class PlayerController : MonoBehaviour
 {
@@ -61,6 +62,12 @@ public class PlayerController : MonoBehaviour
 	private void Thrust(InputAction.CallbackContext context)
 	{
 		_thrust = context.ReadValue<float>();
+	}
+
+	[YarnCommand("UpgradeSpeed")]
+    public void SpeedUpgrade()
+	{ 
+		speed = 14; acceleration = 5;
 	}
 
 	// Update is called once per frame
