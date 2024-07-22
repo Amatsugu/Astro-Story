@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour
 
 	[Header("Sounds")]
 	public float minPitch = 1;
-
 	public float maxPitch = 1.2f;
+	public AudioSource pickupSoundSource;
 
 	[Header("Input")]
 	public InputActionReference steerAction;
@@ -61,6 +61,11 @@ public class PlayerController : MonoBehaviour
 	private void Thrust(InputAction.CallbackContext context)
 	{
 		_thrust = context.ReadValue<float>();
+	}
+
+	public void PlayPickupSound(AudioClip clip)
+	{
+		pickupSoundSource.PlayOneShot(clip);
 	}
 
 	// Update is called once per frame

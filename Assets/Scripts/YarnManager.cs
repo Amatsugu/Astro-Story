@@ -62,7 +62,11 @@ public class YarnManager : MonoBehaviour
         }
     }
 
-    private void Awake()
+	private void Update()
+	{
+	}
+
+	private void Awake()
     {
         _instance = this;
     }

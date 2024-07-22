@@ -70,6 +70,7 @@ MonoBehaviour:
   resource: 2
   value: 1
   killParent: 0
+  pickupSound: {fileID: 8300000, guid: 09c833077bc6b4f439bfa2d4d5069a1c, type: 3}
 --- !u!1001 &1792024456415265208
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -70,6 +70,7 @@ MonoBehaviour:
   resource: 0
   value: 1
   killParent: 0
+  pickupSound: {fileID: 8300000, guid: 14cef73a8ebaefc448b824869726357f, type: 3}
 --- !u!1 &7997407296936371133
 GameObject:
   m_ObjectHideFlags: 0
