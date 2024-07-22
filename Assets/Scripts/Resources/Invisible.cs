@@ -52,8 +52,6 @@ public class Invisible : MonoBehaviour
 	private void SetOpacity(float opacity)
 	{
 		var material = _meshRenderer.material;
-		var col = material.color;
-		col.a = opacity;
-		material.color = col;
+		material.SetFloat("_Alpha", opacity);
 	}
 }

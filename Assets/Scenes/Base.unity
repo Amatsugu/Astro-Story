@@ -2645,6 +2645,7 @@ MonoBehaviour:
   interactAction: {fileID: 3751025591313024633, guid: 891855b307d7bc244a16980b0e5d7eab,
     type: 3}
   player: {fileID: 1169393012}
+  endScreen: {fileID: 0}
   prompt: {fileID: 1354921619}
   planetCamera: {fileID: 876944738}
 --- !u!114 &1876695729

@@ -22840,6 +22840,10 @@ MonoBehaviour:
   planet3: {fileID: 17910545}
   planet4: {fileID: 1877139758}
   planet5: {fileID: 1402227769}
+  planet6: {fileID: 0}
+  donut: {fileID: 0}
+  crashedShip: {fileID: 0}
+  ship: {fileID: 0}
 --- !u!1 &1488783322
 GameObject:
   m_ObjectHideFlags: 0
