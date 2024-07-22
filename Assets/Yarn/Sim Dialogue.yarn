@@ -37,7 +37,7 @@ title: Sim2
 	Sim: And a seal... 
 	Sim: Ready to boot!
 	<<SetCompass Beta>>
-	<<Modify Resource (1, -10)>>
+	<<ModifyResource (1, -10)>>
 	Omo: Thank you!
 	<<set $SimQuestComplete to true>>
 <<else>>
