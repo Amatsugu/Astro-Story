@@ -1,5 +1,6 @@
 # Astro-Story
  Mini Jam Entry
 
-Amazed - Design and Writing
-Ellis - Writing
+**Amatsugu** - Programming, 3D, Shaders
+**Amazed** - Design and Writing
+**Ellis** - Writing
