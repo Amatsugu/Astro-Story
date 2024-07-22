@@ -40,6 +40,9 @@ public class GameManager : MonoBehaviour
 			Debug.LogWarning($"Duplicate entry for <color='red'>{planet.planet}</color> found", planet);
 		else
 			Debug.Log($"Added entry for planet <color='White'>{planet.planet}</color>");
+
+		if(planet.planet == YarnManager.Planet.Beta)
+			planet.gameObject.SetActive(false);
 	}
 
 	private void Start()
@@ -155,5 +158,10 @@ public class GameManager : MonoBehaviour
 	{
 		Instance.endScreen.SetActive(true);
 		Instance._isEnd = true;
+	}
+
+	public static void ShowBeta() 
+	{
+		GetPlanet(YarnManager.Planet.Beta).gameObject.SetActive(true);
 	}
 }
