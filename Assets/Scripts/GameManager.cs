@@ -165,7 +165,8 @@ public class GameManager : MonoBehaviour
 		Instance._isEnd = true;
 	}
 
-	public static void ShowBeta() 
+    [YarnCommand("ShowBeta")]
+    public static void ShowBeta() 
 	{
 		GetPlanet(YarnManager.Planet.Beta).gameObject.SetActive(true);
 	}
