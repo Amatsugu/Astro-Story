@@ -19,7 +19,7 @@ Omo: You are so well versed both in my ship and device. I take it the repair wil
 
 Sim: Golly! I can fix the system quickly, but have we discussed the payment yet?
 
-Sim: 10 Quirkstone will cover my costs and materials. Can you collect it for me?
+Sim: 4 Quirkstone will cover my costs and materials. Can you collect it for me?
 
 Omo: Try me!
 <<jump Sim2>>
@@ -30,17 +30,17 @@ title: Sim2
 <<if $SimQuestComplete>>
 	Sim: If you need anything else, you know where to find me. A good rotation to you.
 	Omo: And a good rotation to you as well.
-<<elseif HasResource(1, 10)>>
+<<elseif HasResource(1, 4)>>
 	Omo: This must be enough?
 	Sim: Indeed. A new core... 
 	Sim: And a zap... 
 	Sim: And a seal... 
 	Sim: Ready to boot!
 	<<SetCompass Beta>>
-	<<ModifyResource 1 -10>>
+	<<ModifyResource 1 -4>>
 	Omo: Thank you!
 	<<set $SimQuestComplete to true>>
 <<else>>
-	Sim: It can all run away from you! But if you can't catch it, maybe there is a way to boost your engine? I cannot do with less than 10.
+	Sim: It can all run away from you! But if you can't catch it, maybe there is a way to boost your engine? I cannot do with less than 4.
 <<endif>>
 ===
