@@ -6,6 +6,7 @@ using TMPro;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Yarn.Unity;
 
 public class GameManager : MonoBehaviour
 {
@@ -157,7 +158,8 @@ public class GameManager : MonoBehaviour
 		return null;
 	}
 
-	public static void ShowEndScreen()
+    [YarnCommand("End")]
+    public static void ShowEndScreen()
 	{
 		Instance.endScreen.SetActive(true);
 		Instance._isEnd = true;
