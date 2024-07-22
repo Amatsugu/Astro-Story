@@ -29,7 +29,9 @@ title: Eno2
 	<<set $EnuQuestComplete to true>>
 	Enu: There is a well-guarded secret this planet holds which will help invigorate one's ship.
 	Enu: A recipe for oil that makes a potent fuel. Simply try it!
-	Omo: Wild! Sounds great!
+	<<UpgradeSpeed Player>>
+	<<ShowBeta GameManager>>
+	Omo: Wild! Sounds like exactly what I need to reach Beta!
 <<else>>
 	Enu: Keep stalking them, you're doing great! There must be 20 of them out there!
 <<endif>>
