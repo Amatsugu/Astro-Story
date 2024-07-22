@@ -12,3 +12,5 @@
 **Ellis** - Writing
 
 **Kyarin** - Music and Sound Design
+
+**Jeager** - Music
