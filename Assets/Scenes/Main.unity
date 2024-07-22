@@ -9074,9 +9074,9 @@ MonoBehaviour:
   fadeDuration: 1
   planetMusic:
   - planet: 2
-    clip: {fileID: 8300000, guid: 8a0eea50ba0d89749adb96f19bdc5eae, type: 3}
+    clip: {fileID: 8300000, guid: 64f42c5db75b4d048baf99e361e7e4a5, type: 3}
   - planet: 3
-    clip: {fileID: 8300000, guid: 4db7f800b375cf64486b0048e896b777, type: 3}
+    clip: {fileID: 8300000, guid: 8483fceea2b7bde4b83fb99740ee233e, type: 3}
   - planet: 0
     clip: {fileID: 8300000, guid: 0099df5e4039eb947b66fd5af2113994, type: 3}
   - planet: 4
