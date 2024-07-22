@@ -10,3 +10,5 @@
 **NoSix** - Level Design and Programming
 
 **Ellis** - Writing
+
+**Kyarin** - Music and Sound Design
