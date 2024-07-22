@@ -51,7 +51,6 @@ public class MusicManager : MonoBehaviour
 
 	private void Start()
 	{
-		Play(mainBGM);
 	}
 
 	private void Update()
