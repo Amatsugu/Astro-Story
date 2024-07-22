@@ -7,4 +7,6 @@
 
 **Amazed** - Design and Writing
 
+**NoSix** - Level Design and Programming
+
 **Ellis** - Writing
