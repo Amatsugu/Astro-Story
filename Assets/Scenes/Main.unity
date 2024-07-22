@@ -363,6 +363,58 @@ Transform:
   - {fileID: 2128587940}
   m_Father: {fileID: 578550697}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &198286525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 198286526}
+  - component: {fileID: 198286527}
+  m_Layer: 5
+  m_Name: VolumeGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &198286526
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198286525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 625489730}
+  m_Father: {fileID: 1488783326}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1246.5, y: 652.5}
+  m_SizeDelta: {x: 408.47388, y: 327.13452}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &198286527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198286525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5299ea28ece26824187cac6cf7445bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 27f04e1f6f295d64fbe202fc4bc6509f, type: 2}
+  sfxSlider: {fileID: 2011042549}
+  musicSlider: {fileID: 1273100640}
 --- !u!1 &243606442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,7 +1241,6 @@ GameObject:
   m_Component:
   - component: {fileID: 625489730}
   - component: {fileID: 625489732}
-  - component: {fileID: 625489731}
   m_Layer: 5
   m_Name: Volume Controls
   m_TagString: Untagged
@@ -1204,7 +1255,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625489729}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1213,28 +1264,13 @@ RectTransform:
   - {fileID: 2011042548}
   - {fileID: 1542534253}
   - {fileID: 1273100639}
-  m_Father: {fileID: 1488783326}
+  m_Father: {fileID: 198286526}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 204.23694, y: -163.56726}
   m_SizeDelta: {x: 408.4739, y: 327.1345}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &625489731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625489729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5299ea28ece26824187cac6cf7445bc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: 27f04e1f6f295d64fbe202fc4bc6509f, type: 2}
-  sfxSlider: {fileID: 2011042549}
-  musicSlider: {fileID: 1273100640}
 --- !u!114 &625489732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1508,7 +1544,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876944737}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb7194dc27b9df64c8beca7482ee8e0d, type: 3}
   m_Name: 
@@ -7950,7 +7986,7 @@ RectTransform:
   - {fileID: 1353050790}
   - {fileID: 1354921618}
   - {fileID: 593100674}
-  - {fileID: 625489730}
+  - {fileID: 198286526}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8885,6 +8921,7 @@ MonoBehaviour:
   interactAction: {fileID: 3751025591313024633, guid: 891855b307d7bc244a16980b0e5d7eab,
     type: 3}
   player: {fileID: 1169393012}
+  volumePanel: {fileID: 198286525}
   endScreen: {fileID: 593100673}
   prompt: {fileID: 1354921619}
   planetCamera: {fileID: 876944738}
