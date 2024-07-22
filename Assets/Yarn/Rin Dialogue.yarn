@@ -8,9 +8,9 @@ Unknown Captain: Transmission received. This is Captain Rin, identifier sequence
 
 Omo: Hello, Rin. My name’s Omo, identifier sequence… none? I was sent here from Planet Alpha to make a delivery. Are you my contact?
 
-Rin: Delivery? Negative. My ship was damaged passing through an asteroid belt. There’s no one here besides you and me.
+Rin: Delivery? Negative. My ship was damaged passing through an asteroid belt. But I am transimitting a distress signal.
 
-Omo: Then how did Ava know?
+Omo: How did Ava know?
 
 Omo: Never mind. Is your ship operational?
 
@@ -30,7 +30,6 @@ Rin: Affirmative.
 
 -> Omo: Tell me about Beta.
     <<jump BetaLore>>
-
 -> Omo: I won’t leave you stranded here. How can I help?
     <<jump Rin3>>
 ===
@@ -48,7 +47,7 @@ Omo: I was born on Beta. But I don’t remember it, and my parents… aren’t a
 Rin: Hmm. Then I’ll tell you the truth. Most of the planet is still unmapped. We don’t know why half the things on Beta are the way they are - like why there’s a dearth of raw resources on the surface. The planet’s peculiarities are why we focused on leaving it rather than exploring it. You were lucky to live on a colony world.
 
 -> Omo: Beta sounds amazing. I must see it.
--> Omo: Beta sounds terrible. Besides, nothing could be better than Alpha.
+-> Omo: Beta sounds terrible. I knew, no place could be better than Alpha.
 
 Rin: Now, are we going to talk all rotation or are you going to help another Beta pilot out?
 
