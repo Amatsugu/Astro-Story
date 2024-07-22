@@ -6,6 +6,7 @@ using TMPro;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Yarn.Unity;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
 	public InputActionReference interactAction;
 
 	public Transform player;
+	public GameObject volumePanel;
 	public GameObject endScreen;
 	public YarnManager.Planet? selectedPlanet;
 	public TextMeshProUGUI prompt;
@@ -65,6 +67,7 @@ public class GameManager : MonoBehaviour
 	public void OnDialougeStart()
 	{
 		Debug.Log("Dialouge Start");
+		volumePanel.SetActive(false);
 		if (selectedPlanet is YarnManager.Planet planet)
 		{
 			HidePrompt();
@@ -81,6 +84,7 @@ public class GameManager : MonoBehaviour
 	public void OnDialougeStop()
 	{
 		Debug.Log("Dialouge Stop");
+		volumePanel.SetActive(true);
 		_isInDialouge = false;
 		planetCamera.gameObject.SetActive(false);
 		selectedPlanet = null;
@@ -154,7 +158,8 @@ public class GameManager : MonoBehaviour
 		return null;
 	}
 
-	public static void ShowEndScreen()
+    [YarnCommand("End")]
+    public static void ShowEndScreen()
 	{
 		Instance.endScreen.SetActive(true);
 		Instance._isEnd = true;
