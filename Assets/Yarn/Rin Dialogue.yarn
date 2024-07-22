@@ -69,5 +69,12 @@ Rin: Before you leave, do you have anything I can use to fix my ship?
 
 -> Omo: I can give you the SG4R I was sent here to deliver.
     <<ModifyResource 2 -10>>
+    Rin: There is one more important thing. 
+    Rin: Your ship is too slow to catch up with Beta before it gets out of reach. You must find a way to boost your engine.
 -> Omo: No, sorry.
+===
+
+title: Rin3
+---
+Rin: Good Luck
 ===

@@ -14,7 +14,7 @@ Rin: Yes, Ava. It seems I'm in both of your debt. Congratulations on making it t
 -> Omo: I'm only here to save the day, then I'm headed back to Alpha.
 
 Rin: Now, to business. Beta has a very small supply of natural resources. We need everything we can get. 
-<<Jump RinFinal2>>
+<<jump RinFinal2>>
 
 ===
 title: RinFinal2

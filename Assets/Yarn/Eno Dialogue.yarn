@@ -30,7 +30,7 @@ title: Eno2
 	Enu: There is a well-guarded secret this planet holds which will help invigorate one's ship.
 	Enu: A recipe for oil that makes a potent fuel. Simply try it!
 	<<UpgradeSpeed Player>>
-	<<ShowBeta GameManager>>
+	<<ShowBeta>>
 	Omo: Wild! Sounds like exactly what I need to reach Beta!
 <<else>>
 	Enu: Keep stalking them, you're doing great! There must be 10 of them out there!

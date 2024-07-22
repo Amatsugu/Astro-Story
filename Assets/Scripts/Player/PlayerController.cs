@@ -20,8 +20,8 @@ public class PlayerController : MonoBehaviour
 
 	[Header("Sounds")]
 	public float minPitch = 1;
-
 	public float maxPitch = 1.2f;
+	public AudioSource pickupSoundSource;
 
 	[Header("Input")]
 	public InputActionReference steerAction;
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
 			_audioSource.Play();
 	}
 
-	
+
 
 	private void Steer(InputAction.CallbackContext context)
 	{
@@ -64,10 +64,16 @@ public class PlayerController : MonoBehaviour
 		_thrust = context.ReadValue<float>();
 	}
 
+	public void PlayPickupSound(AudioClip clip)
+	{
+		pickupSoundSource.PlayOneShot(clip);
+	}
+
+	[ContextMenu("SPEEDUp")] //Debug
 	[YarnCommand("UpgradeSpeed")]
-    public void SpeedUpgrade()
-	{ 
-		speed = 14; acceleration = 5;
+	public void SpeedUpgrade()
+	{
+		speed = 16; acceleration = 5;
 	}
 
 	// Update is called once per frame
@@ -87,7 +93,7 @@ public class PlayerController : MonoBehaviour
 			{
 				_curSpeed -= drag * Time.deltaTime;
 			}
-			if(_curSpeed < 0)
+			if (_curSpeed < 0)
 				_curSpeed = 0;
 		}
 
@@ -99,7 +105,7 @@ public class PlayerController : MonoBehaviour
 				_curTurnSpeed -= turnDrag * Time.deltaTime;
 			if (_curTurnSpeed < 0)
 				_curTurnSpeed += turnDrag * Time.deltaTime;
-			if(Mathf.Abs(_curTurnSpeed) < 0.1f)
+			if (Mathf.Abs(_curTurnSpeed) < 0.1f)
 				_curTurnSpeed = 0;
 		}
 
@@ -127,4 +133,14 @@ public class PlayerController : MonoBehaviour
 		var pitch = Mathf.Lerp(minPitch, maxPitch, speedScale);
 		_audioSource.pitch = pitch;
 	}
+
+    [ContextMenu("GIVEResource")] //DEBUG
+    public void Resources15()
+    {
+        ResourceTracker.ModifyResource(Resource.Voidmoss, 15);
+
+        ResourceTracker.ModifyResource(Resource.Quirkrock, 15);
+
+        ResourceTracker.ModifyResource(Resource.SG4R, 15);
+    }
 }

@@ -30,14 +30,14 @@ title: Sim2
 <<if $SimQuestComplete>>
 	Sim: If you need anything else, you know where to find me. A good rotation to you.
 	Omo: And a good rotation to you as well.
-<<elseif HasResource (1, 10)>>
+<<elseif HasResource(1, 10)>>
 	Omo: This must be enough?
 	Sim: Indeed. A new core... 
 	Sim: And a zap... 
 	Sim: And a seal... 
 	Sim: Ready to boot!
 	<<SetCompass Beta>>
-	<<Modify Resource (1, -10)>>
+	<<ModifyResource 1 -10>>
 	Omo: Thank you!
 	<<set $SimQuestComplete to true>>
 <<else>>
