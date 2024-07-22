@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff93382cc88b85540b65cc74c14461b6, type: 3}
   m_Name: Color
   m_EditorClassIdentifier: 
-  planetMaterial: {fileID: 2100000, guid: 4380378b2254fd64b8ee90e0f059bcbb, type: 2}
+  planetMaterial: {fileID: 2100000, guid: c0f2b28a954725b40bf644ebea382134, type: 2}
   biomeColorSettings:
     biomes:
     - gradient:
