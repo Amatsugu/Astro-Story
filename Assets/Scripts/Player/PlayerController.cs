@@ -69,10 +69,11 @@ public class PlayerController : MonoBehaviour
 		pickupSoundSource.PlayOneShot(clip);
 	}
 
+	[ContextMenu("SPEEDUp")] //Debug
 	[YarnCommand("UpgradeSpeed")]
 	public void SpeedUpgrade()
 	{
-		speed = 14; acceleration = 5;
+		speed = 16; acceleration = 5;
 	}
 
 	// Update is called once per frame
@@ -132,4 +133,14 @@ public class PlayerController : MonoBehaviour
 		var pitch = Mathf.Lerp(minPitch, maxPitch, speedScale);
 		_audioSource.pitch = pitch;
 	}
+
+    [ContextMenu("GIVEResource")] //DEBUG
+    public void Resources15()
+    {
+        ResourceTracker.ModifyResource(Resource.Voidmoss, 15);
+
+        ResourceTracker.ModifyResource(Resource.Quirkrock, 15);
+
+        ResourceTracker.ModifyResource(Resource.SG4R, 15);
+    }
 }
