@@ -31,7 +31,7 @@ Rin: Affirmative.
 -> Omo: Tell me about Beta.
     <<jump BetaLore>>
 -> Omo: I won’t leave you stranded here. How can I help?
-    <<jump Rin3>>
+    <<jump Rin2>>
 ===
 
 title: BetaLore

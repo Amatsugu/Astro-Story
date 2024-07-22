@@ -12,7 +12,7 @@ Omo: Omo the astrocourier at your service.
 Enu: Or so I may hope, actually! If one was interested to help an old cultivator out?
 Omo: Try me... Once I know what's the task?
 Enu: The only flora which is not available on this planet is Voidmoss. Yet it has multiple wonderful properties.
-Enu: I couldn't nab any since a traveler brought me some thousands of moons ago. 20 bunches would go along way!
+Enu: I couldn't nab any since a traveler brought me some thousands of moons ago. 10 bunches would go along way!
 -> These creepers? Sure, I keep stumbling upon them.
 	<<jump Eno2>>
 -> No promises. You are not the only one in need of these.
@@ -23,14 +23,16 @@ title: Eno2
 ---
 <<if $EnuQuestComplete>>
 	Enu: Godspeed traveller!
-<<elseif HasResource(0, 20)>>
+<<elseif HasResource(0, 10)>>
 	Enu: This will do! And I did not miss one's kindness.
-	<<ModifyResource 0 -20>>
+	<<ModifyResource 0 -10>>
 	<<set $EnuQuestComplete to true>>
 	Enu: There is a well-guarded secret this planet holds which will help invigorate one's ship.
 	Enu: A recipe for oil that makes a potent fuel. Simply try it!
-	Omo: Wild! Sounds great!
+	<<UpgradeSpeed Player>>
+	<<ShowBeta GameManager>>
+	Omo: Wild! Sounds like exactly what I need to reach Beta!
 <<else>>
-	Enu: Keep stalking them, you're doing great! There must be 20 of them out there!
+	Enu: Keep stalking them, you're doing great! There must be 10 of them out there!
 <<endif>>
 ===

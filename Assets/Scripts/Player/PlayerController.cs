@@ -4,6 +4,7 @@ using System.IO;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Yarn.Unity;
 
 public class PlayerController : MonoBehaviour
 {
@@ -51,7 +52,7 @@ public class PlayerController : MonoBehaviour
 			_audioSource.Play();
 	}
 
-	
+
 
 	private void Steer(InputAction.CallbackContext context)
 	{
@@ -66,6 +67,12 @@ public class PlayerController : MonoBehaviour
 	public void PlayPickupSound(AudioClip clip)
 	{
 		pickupSoundSource.PlayOneShot(clip);
+	}
+
+	[YarnCommand("UpgradeSpeed")]
+	public void SpeedUpgrade()
+	{
+		speed = 14; acceleration = 5;
 	}
 
 	// Update is called once per frame
@@ -85,7 +92,7 @@ public class PlayerController : MonoBehaviour
 			{
 				_curSpeed -= drag * Time.deltaTime;
 			}
-			if(_curSpeed < 0)
+			if (_curSpeed < 0)
 				_curSpeed = 0;
 		}
 
@@ -97,7 +104,7 @@ public class PlayerController : MonoBehaviour
 				_curTurnSpeed -= turnDrag * Time.deltaTime;
 			if (_curTurnSpeed < 0)
 				_curTurnSpeed += turnDrag * Time.deltaTime;
-			if(Mathf.Abs(_curTurnSpeed) < 0.1f)
+			if (Mathf.Abs(_curTurnSpeed) < 0.1f)
 				_curTurnSpeed = 0;
 		}
 

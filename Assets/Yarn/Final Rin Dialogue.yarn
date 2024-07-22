@@ -20,10 +20,10 @@ Rin: Now, to business. Beta has a very small supply of natural resources. We nee
 title: RinFinal2
 ---
 Rin: If you collected resources during your travels, will you share them with the citizens of our planet?
--> Omo: I have SG4R, Quirkstone and Voidmoss. I’ll give you as much as possible. <<if HasResource(0, 50) and HasResource(1, 50) and HasResource(2, 50)>>
-	<<ModifyResource 0 -50>>
-	<<ModifyResource 1 -50>>
-	<<ModifyResource 2 -50>>
+-> Omo: I have SG4R, Quirkstone and Voidmoss. I’ll give you as much as possible. <<if HasResource(0, 15) and HasResource(1, 15) and HasResource(2, 15)>>
+	<<ModifyResource 0 -15>>
+	<<ModifyResource 1 -15>>
+	<<ModifyResource 2 -15>>
 	Rin: That’s wonderful! Those resources will go to good use.
 	Omo: I’m glad I could help.
 	Rin: Now what will you do?
@@ -45,6 +45,6 @@ Rin: If you collected resources during your travels, will you share them with th
 	    Rin: I don’t think that’s a good idea after what you just said. But I won’t stop you.
 	    Omo: Goodbye, Rin.
 		<<End>>
--> Omo: I'm working on it. Hold on a bit longer.
+-> Omo: I'm working on it. Hold on a bit longer. I think I can get 15 of each.
 ===
 
