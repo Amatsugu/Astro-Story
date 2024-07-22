@@ -174,7 +174,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 40.83
+  m_Radius: 60
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8882835989498378683
 MonoBehaviour:
@@ -188,4 +188,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2c79d493c529e40aaf8102828e9d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 40.83
+  detectionRange: 60
