@@ -9,7 +9,7 @@ public class ContinueListener : MonoBehaviour
     [SerializeField] LineView lineView;
     private void OnGUI()
     {
-        if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.Escape) && !Input.GetKeyDown(KeyCode.W) && !Input.GetKeyDown(KeyCode.S) && !Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.Q) || Input.GetMouseButtonUp(1) || Input.GetKeyUp(KeyCode.Joystick1Button1))
         {
             lineView.OnContinueClicked(); 
         }

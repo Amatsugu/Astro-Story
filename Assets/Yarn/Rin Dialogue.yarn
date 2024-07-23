@@ -31,7 +31,7 @@ Rin: Affirmative.
 -> Omo: Tell me about Beta.
     <<jump BetaLore>>
 -> Omo: I won’t leave you stranded here. How can I help?
-    <<jump Rin2>>
+    <<jump Rin1j1>>
 ===
 
 title: BetaLore
@@ -52,9 +52,11 @@ Rin: Hmm. Then I’ll tell you the truth. Most of the planet is still unmapped. 
 Rin: Now, are we going to talk all rotation or are you going to help another Beta pilot out?
 
 Omo: What can I do?
+
+<<jump Rin1j1>>
 ===
 
-title: Rin2
+title: Rin1j1
 ---
 Rin: I need you to take the resources I was going to gather back to Beta.
 
@@ -74,7 +76,7 @@ Rin: Before you leave, do you have anything I can use to fix my ship?
 -> Omo: No, sorry.
 ===
 
-title: Rin3
+title: Rin2
 ---
-Rin: Good Luck
+Rin: Good Luck! Please, fix the Nav, boost your Shuttle and find the goods. Beta counts on you!
 ===

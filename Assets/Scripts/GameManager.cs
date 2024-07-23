@@ -50,11 +50,9 @@ public class GameManager : MonoBehaviour
 	private void Start()
 	{
 		Debug.Log("Game Start");
-#if DEBUG
 		var first = GetPlanet(YarnManager.Planet.Alpha);
 		if (first != null)
 			Compass.SetTarget(first);
-#endif
 
 		planetCamera.gameObject.SetActive(false);
 		interactAction.action.started += Interact;

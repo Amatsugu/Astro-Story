@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc772a824737af243879f01d79794499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueLimits: 0300000002000000020000000200000003000000
+  dialogueLimits: 0300000002000000020000000200000002000000
   dialogueRunner: {fileID: 3257781411064513478}
 --- !u!1001 &2060506416894851668
 PrefabInstance:
@@ -263,6 +263,11 @@ PrefabInstance:
     - target: {fileID: 7778558435068644803, guid: 7f29e5f7ffdea4a6793cefb278b61f0c,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558435068644806, guid: 7f29e5f7ffdea4a6793cefb278b61f0c,
+        type: 3}
+      propertyPath: useTypewriterEffect
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7778558435732307477, guid: 7f29e5f7ffdea4a6793cefb278b61f0c,
