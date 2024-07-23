@@ -41,6 +41,6 @@ title: Sim2
 	Omo: Thank you!
 	<<set $SimQuestComplete to true>>
 <<else>>
-	Sim: It can all run away from you! But if you can't catch it, maybe there is a way to boost your engine? I cannot do with less than 4.
+	Sim: It can't all run away from you! But if you can't catch it, maybe there is a way to boost your engine? I cannot do with less than 4.
 <<endif>>
 ===
